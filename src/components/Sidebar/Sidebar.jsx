@@ -1,6 +1,9 @@
+// Sidebar.js
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 import leftArrow from "/left-arrow.svg";
+import sidebarLinks from "./SidebarLinks";
 
 function Sidebar() {
   const [isSidebarToggled, setIsSidebarToggled] = useState(false);
@@ -11,12 +14,12 @@ function Sidebar() {
 
   return (
     <aside className={`sidebar ${!isSidebarToggled && "sidebar-collapsed"}`}>
-      {/* these examples should be deleted */}
       <nav>
         <ul>
           <li className="left-arrow" onClick={toggleSidebar}>
             <img
               src={leftArrow}
+              alt="Toggle Sidebar"
               style={{
                 transform: !isSidebarToggled
                   ? "rotateY(180deg)"
@@ -24,13 +27,19 @@ function Sidebar() {
               }}
             />
           </li>
-          <li>Link 1</li>
-          <li>Link 2</li>
-          <li>Link 3</li>
-          <li>Link 4</li>
+          <li>
+            <img src="../../public/Logo.png" alt="logo" className="logo" />
+          </li>
+          {sidebarLinks.map((link, index) => (
+            <li key={index} className="icons">
+              <Link to={link.path}>
+                <img src={link.src} alt={link.alt} />
+                {isSidebarToggled && <span>{link.label}</span>}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
-      {/* these examples should be deleted */}
     </aside>
   );
 }
