@@ -1,61 +1,77 @@
 @import "../../styles/abstracts/variables";
 
 .sidebar {
-  width: 250px;
+  width: 100px;
   background-color: $secondary-bg;
   color: $primary-font-color;
-  padding: 0 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   position: fixed;
-  top: 0;
-  left: 0;
   height: 100%;
-  z-index: 999;
-  transition: width 300ms ease;
   padding: 1em 0;
-
-  .left-arrow {
-    text-align: center;
-
-    img {
-      width: 30px;
-    }
-  }
-
-  .logo {
-    width: 100px;
-    padding: 10px;
-  }
-
-  .icons {
-    align-items: center;
-    text-align: center;
-
-    img {
-      width: 100px;
-      padding: 30px;
-      margin-bottom: 50px;
-    }
-
-    img:hover {
-      background-color: $primary-bg;
-      border-radius: 12px 0 0 12px;
-    }
-
-    .logOut {
-      margin-top: 60px;
-    }
-  }
+  z-index: 1;
 }
 
-.sidebar-collapsed {
-  width: 100px;
+.logo {
+  width: 60px;
+  margin-bottom: 1rem;
+  justify-self: center;
+}
+
+.navbar-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  transition: background-color 0.3s;
+  margin: 1px 0;
+}
+
+.nav-item svg {
+  width: 32px;
+  height: 32px;
+}
+
+.active-link {
+  background-color: $accent-color;
+  border-radius: 15px 0 0 15px;
+  width: 80px;
+}
+
+.active-link svg path {
+  fill: $primary-font-color;
 }
 
 @media (max-width: 768px) {
-  .sidebar-collapsed {
+  .sidebar {
     width: 70px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .navbar-items {
+    width: 100%;
+  }
+
+  .nav-item {
+    height: 60px;
+    width: 60px;
+  }
+
+  .active-link {
+    border-radius: 50%;
+    width: 60px;
   }
 }
