@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dash Board </title>
-    <link rel="stylesheet" href="mto.scss">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Board</title>
+    <link rel="stylesheet" href="mto.css" />
+  </head>
+  <body>
     <section class="mto__tree">
-        <div class="mto__head">
-            <h1> Most Type of Order</h1>
-            <select class="mto__fitler">
-                <option value="1">Today</option>
-                <option value="2">This Week</option>
-                <option value="3">This Month</option>
-            </select>
+      <div class="mto__head">
+        <h1 class="mto__head-text">Most Type of Order</h1>
+        <select class="mto__fitler">
+          <option value="1">Today</option>
+          <option value="2">This Week</option>
+          <option value="3">This Month</option>
+        </select>
+      </div>
+      <div class="divider"></div>
+      <div class="mto__chart-head">
+        <div class="circle__head">
+          <div class="circle__head--1">
+            <div class="circle" data-degree="84" data-color="#ff2972"></div>
+          </div>
+          <div class="circle__head--2">
+            <div class="circle" data-degree="58" data-color="#fee800"></div>
+          </div>
+          <div class="circle__head--3">
+            <div class="circle" data-degree="58" data-color="#fee800"></div>
+          </div>
         </div>
+        <div class="mto__chart">
+          <div class="mto__chart-info">
+            <div class="info__color">
+              <div class="mto__chart-pink-info">
+                <div class="mto__chart-info-text">
+                  <h3 class="mto__chart-text">Dine In</h3>
+                </div>
+                <div class="mto__chart-yellow-info">
+                  <div class="mto__chart-info-text">
+                    <h3 class="mto__chart-text">To Go</h3>
+                  </div>
+                </div>
+                <div class="mto__chart-blue-info">
+                  <div class="mto__chart-info-text">
+                    <h3 class="mto__chart-text">Delivery</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
+    <script src="mto.js"></script>
+  </body>
 </html>

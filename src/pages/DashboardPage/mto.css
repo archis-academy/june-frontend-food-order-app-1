@@ -1,10 +1,142 @@
-.mto__fitler{
-  width:  372px;
-height:  333px;
-padding: 24px 0px 40px 0px;
-gap: 32px;
-border-radius: 8px 0px 0px 0px;
-opacity: 0px;
-background: rgba(31, 29, 43, 1);
+.mto__tree {
+  width: 372px;
+  height: 333px;
+  padding: 24px 0px 40px 0px;
+  gap: 32px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+  background: rgba(31, 29, 43, 1);
+  color: white;
+}
+.mto__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mto__head-text {
+  width: 165px;
+  height: 28px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  white-space: nowrap;
+}
 
+.mto__fitler {
+  width: 95px;
+  height: 45px;
+  margin-left: 64px;
+  background-color: rgba(31, 29, 43, 1);
+  color: white;
+  text-align: center;
+}
+.divider {
+  width: 370px;
+  margin-top: 16px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid rgba(57, 60, 73, 1);
+}
+.mto__chart {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.mto__chart-info {
+  width: 105px;
+  height: 143px;
+  top: 134px;
+  left: 235px;
+  gap: 16px;
+  opacity: 0px;
+}
+
+.mto__chart-info-text {
+  width: 78px;
+  left: 27px;
+  position: relative;
+}
+.mto__chart-pink-info {
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  background-color: rgba(255, 124, 163, 1);
+  border-radius: 50%;
+}
+
+.mto__chart-yellow-info {
+  width: 18px;
+  height: 18px;
+  top: 1px;
+
+  background-color: rgba(255, 181, 114, 1);
+  border-radius: 50%;
+}
+.mto__chart-blue-info {
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  background-color: rgba(101, 176, 246, 1);
+  border-radius: 50%;
+}
+
+.mto__chart-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+}
+
+.mto__chart-text-un {
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(171, 187, 194, 1);
+}
+
+.mto__chart-head {
+  width: 370px;
+  margin-top: 32px;
+  display: flex;
+}
+.circle__head {
+  position: relative;
+  width: 176px;
+  height: 176px;
+  top: 117px;
+  left: 32px;
+
+}
+
+.circle__head .circle {
+  position: absolute;
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+}
+
+.circle__head .circle ::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 11px solid rgba(31, 29, 43, 1);
+  opacity: 0.8;
+}
+
+.circle__head .circle ::after {
+  content: "";
+  position: absolute;
+  width: 176px;
+  height: 176px;
+  border: 11px solid rgba(101, 176, 246, 1);
 }
