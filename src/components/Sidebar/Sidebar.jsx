@@ -1,18 +1,19 @@
 import "./Sidebar.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import sidebarLinks from "./SidebarLinks";
 
 function Sidebar() {
+  let location = useLocation();
   return (
     <aside className="sidebar">
-      <nav>
+      <nav className="navbar">
         <img src="../../public/Logo.png" alt="logo" className="logo" />
         <ul>
           {sidebarLinks.map((link, index) => (
             <li key={index} className="navbar-items">
               <NavLink
                 to={link.path}
-                className={({ isActive }) => (isActive ? "nav-item active-link" : "nav-item")}
+                className={link.path === location.pathname ? "nav-item active-link" : "nav-item"}
               >
                 {link.icon}
               </NavLink>

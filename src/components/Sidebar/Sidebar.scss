@@ -19,12 +19,13 @@
   margin-bottom: 1rem;
   justify-self: center;
 }
-
-.navbar-items {
-  width: 100%;
+.navbar {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
+
 
 .nav-item {
   display: flex;
