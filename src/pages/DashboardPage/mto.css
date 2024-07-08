@@ -1,3 +1,8 @@
+body {
+  width: 1194px;
+  height: 834px;
+  background-color: rgba(37, 40, 54, 1) ;
+}
 .mto__tree {
   width: 372px;
   height: 333px;
@@ -7,6 +12,10 @@
   opacity: 0px;
   background: rgba(31, 29, 43, 1);
   color: white;
+  margin: 24px 24px 24px 24px;
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
 }
 .mto__head {
   display: flex;
@@ -43,7 +52,6 @@
 }
 .mto__chart {
   display: flex;
-
 }
 
 .mto__chart-info {
@@ -112,7 +120,6 @@
   height: 176px;
   top: 117px;
   left: 32px;
-
 }
 
 .circle__head .circle {
