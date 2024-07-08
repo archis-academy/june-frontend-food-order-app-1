@@ -1,7 +1,7 @@
 body {
   width: 1194px;
   height: 834px;
-  background-color: rgba(37, 40, 54, 1) ;
+  background-color: rgba(37, 40, 54, 1);
 }
 .mto__tree {
   width: 372px;
@@ -14,8 +14,8 @@ body {
   color: white;
   margin: 24px 24px 24px 24px;
   position: fixed;
-  bottom: 20px; 
-  right: 20px; 
+  bottom: 20px;
+  right: 20px;
 }
 .mto__head {
   display: flex;
@@ -60,13 +60,13 @@ body {
   top: 134px;
   left: 235px;
   gap: 16px;
-  opacity: 0px;
 }
 
 .mto__chart-info-text {
   width: 78px;
   left: 27px;
   position: relative;
+  margin: 0 auto;
 }
 .mto__chart-pink-info {
   width: 18px;
@@ -96,17 +96,7 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  line-height: 18px;
   text-align: left;
-}
-
-.mto__chart-text-un {
-  font-family: "Barlow", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  text-align: left;
-  color: rgba(171, 187, 194, 1);
 }
 
 .mto__chart-head {
@@ -156,4 +146,18 @@ body {
 svg {
   max-width: 176px;
   height: auto;
+}
+.mto__chart-info-text-under {
+  width: 78px;
+  height: 17px;
+  white-space: nowrap;
+  margin: 0;
+  color: rgba(136, 152, 152, 1);
+}
+.mto__chart-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
 }
