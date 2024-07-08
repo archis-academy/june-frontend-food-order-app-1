@@ -1,8 +1,7 @@
 body {
-  width: 1194px;
-  height: 834px;
   background-color: rgba(37, 40, 54, 1);
 }
+/*?     Most Type of Dınner Start        */
 .mto__tree {
   width: 372px;
   height: 333px;
@@ -161,3 +160,4 @@ svg {
   line-height: 16.8px;
   text-align: left;
 }
+/*?     Most Type of Dınner End        */
