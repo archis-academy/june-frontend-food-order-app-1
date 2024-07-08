@@ -138,3 +138,15 @@
   height: 176px;
   border: 11px solid rgba(101, 176, 246, 1);
 }
+
+.progress-container {
+  width: 250px;
+  height: 176px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  max-width: 176px;
+  height: auto;
+}
