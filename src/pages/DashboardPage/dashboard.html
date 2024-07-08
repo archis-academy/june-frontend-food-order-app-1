@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dash Board</title>
     <link rel="stylesheet" href="mto.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
   </head>
   <body>
     <section class="mto__tree">
@@ -18,18 +24,8 @@
       </div>
       <div class="divider"></div>
       <div class="mto__chart-head">
-        <div class="circle__head">
-          <div class="circle__head--1">
-            <div class="circle" data-degree="84" data-color="#ff2972"></div>
-          </div>
-          <div class="circle__head--2">
-            <div class="circle" data-degree="58" data-color="#fee800"></div>
-          </div>
-          <div class="circle__head--3">
-            <div class="circle" data-degree="58" data-color="#fee800"></div>
-          </div>
-        </div>
         <div class="mto__chart">
+          <div id="progress-container"></div>
           <div class="mto__chart-info">
             <div class="info__color">
               <div class="mto__chart-pink-info">
@@ -52,6 +48,6 @@
         </div>
       </div>
     </section>
-    <script src="mto.js"></script>
   </body>
+  <script src="mto.js"></script>
 </html>

@@ -42,10 +42,8 @@
   border: 1px solid rgba(57, 60, 73, 1);
 }
 .mto__chart {
-  align-items: center;
-  justify-content: center;
   display: flex;
-  position: relative;
+
 }
 
 .mto__chart-info {
