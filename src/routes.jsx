@@ -15,9 +15,7 @@ const routes = [
   {
     path: "/settings",
     element: (
-      <ProtectedRoute>
         <SettingsPage />
-      </ProtectedRoute>
     ),
   },
   {

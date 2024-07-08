@@ -1,0 +1,4 @@
+@import "../../styles/abstracts/index";
+.product-managment-container {
+  @extend %settings-container;
+}
