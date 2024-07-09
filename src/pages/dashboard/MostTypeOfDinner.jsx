@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef, useState } from "react";
 import $ from "jquery";
-import "./MostTypeOfDinner.css";
+import "./mto.scss";
 
 const MostTypeOfDinner = () => {
   const progressContainerRef = useRef(null);
