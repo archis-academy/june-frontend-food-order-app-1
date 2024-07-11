@@ -71,249 +71,248 @@ const MostTypeOfDinner = () => {
       value: 0,
       range: [0, 100],
       color: "#333",
-      animation: {
-        duration: "1s",
-        style: "ease",
-      },
+      animation: { duration: "1s", style: "ease" },
     },
   ]);
 
   const todayData = [
     {
-        id: "progress1",
-        value: 65,
-        range: [0, 100],
-        color: "rgba(101, 176, 246, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress1",
+      value: 65,
+      range: [0, 100],
+      color: "rgba(101, 176, 246, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress2",
-        value: 45,
-        range: [0, 100],
-        color: "rgba(255, 181, 114, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress2",
+      value: 45,
+      range: [0, 100],
+      color: "rgba(255, 181, 114, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress3",
-        value: 55,
-        range: [0, 100],
-        color: "rgba(255, 124, 163, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress3",
+      value: 55,
+      range: [0, 100],
+      color: "rgba(255, 124, 163, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress4",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress4",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress5",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress5",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress6",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress6",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress7",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
-    }
-];
+      id: "progress7",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
+    },
+  ];
   const thisWeekData = [
     {
-        id: "progress1",
-        value: 35,
-        range: [0, 100],
-        color: "rgba(101, 176, 246, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress1",
+      value: 35,
+      range: [0, 100],
+      color: "rgba(101, 176, 246, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress2",
-        value: 65,
-        range: [0, 100],
-        color: "rgba(255, 181, 114, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress2",
+      value: 65,
+      range: [0, 100],
+      color: "rgba(255, 181, 114, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress3",
-        value: 75,
-        range: [0, 100],
-        color: "rgba(255, 124, 163, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress3",
+      value: 75,
+      range: [0, 100],
+      color: "rgba(255, 124, 163, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress4",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress4",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress5",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress5",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress6",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress6",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress7",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
-    }
-];
+      id: "progress7",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
+    },
+  ];
 
   const thisMonthData = [
     {
-        id: "progress1",
-        value: 45,
-        range: [0, 100],
-        color: "rgba(101, 176, 246, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress1",
+      value: 45,
+      range: [0, 100],
+      color: "rgba(101, 176, 246, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress2",
-        value: 55,
-        range: [0, 100],
-        color: "rgba(255, 181, 114, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress2",
+      value: 55,
+      range: [0, 100],
+      color: "rgba(255, 181, 114, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress3",
-        value: 85,
-        range: [0, 100],
-        color: "rgba(255, 124, 163, 1)",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress3",
+      value: 85,
+      range: [0, 100],
+      color: "rgba(255, 124, 163, 1)",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress4",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress4",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress5",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress5",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress6",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
+      id: "progress6",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
     },
     {
-        id: "progress7",
-        value: 0,
-        range: [0, 100],
-        color: "#333",
-        animation: {
-            duration: "1s",
-            style: "ease"
-        }
-    }
-];
+      id: "progress7",
+      value: 0,
+      range: [0, 100],
+      color: "#333",
+      animation: {
+        duration: "1s",
+        style: "ease",
+      },
+    },
+  ];
 
   useEffect(() => {
-    $(progressContainerRef.current).radialMultiProgress({
-      thickness: 8,
-      "font-size": 10,
-      "base-color": "#333",
-      space: 1,
-      antiAlias: false,
-      scaleLabel: false,
-      centerContent: "",
-      responsive: true,
-      innerFullCircle: true,
-      data: data,
-    });
+    if (progressContainerRef.current) {
+      $(progressContainerRef.current).radialMultiProgress({
+        thickness: 8,
+        "font-size": 10,
+        "base-color": "#333",
+        space: 1,
+        antiAlias: false,
+        scaleLabel: false,
+        centerContent: "",
+        responsive: true,
+        innerFullCircle: true,
+        data: data,
+      });
+    }
   }, [data]);
 
   const handleFilterChange = (event) => {
     const selectedValue = event.target.value;
-
+  
     switch (selectedValue) {
       case "1":
         setData(todayData);
@@ -327,13 +326,18 @@ const MostTypeOfDinner = () => {
       default:
         break;
     }
+  
+    updateText(data);
   };
-
+  
   const updateText = (data) => {
     data.forEach((item, index) => {
-      document.querySelectorAll(".mto__chart-info-text-under h3")[index].textContent = `${item.value} customers`;
+      document.querySelectorAll(".mto__chart-info-text-under .mto__chart-text")[
+        index
+      ].textContent = `${item.value} customers`;
     });
   };
+  
 
   useEffect(() => {
     updateText(data);
@@ -352,7 +356,11 @@ const MostTypeOfDinner = () => {
       <div className="divider"></div>
       <div className="mto__chart-head">
         <div className="mto__chart">
-          <div id="progress-container" className="progress-container" ref={progressContainerRef}></div>
+          <div
+            id="progress-container"
+            className="progress-container"
+            ref={progressContainerRef}
+          ></div>
           <div className="mto__chart-info">
             <div className="info__color">
               <div className="mto__chart-pink-info">
