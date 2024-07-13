@@ -8,9 +8,9 @@ import SettingsPage from "./pages/SettingsPage/SettingsPage.jsx";
 const routes = [
   {
     path: "/",
-    element: (
-        <HomePage />
-    ),
+    // element: (
+         // <HomePage />
+    // ),
   },
   {
     path: "/settings",

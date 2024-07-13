@@ -1,0 +1,65 @@
+@import "../../styles/abstracts/variables";
+$primary-cart-font-family: "Barlow", sans-serif;
+
+.cart-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    padding: 10px 40px;
+    max-width: 410px;
+    width: 100%;
+}
+
+.cart-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 360px;
+}
+
+.cart-header-title {
+   color: $primary-font-color;    
+   font-family: $primary-cart-font-family;
+}
+
+.cart-header-buttons-container {
+    display: flex;
+    gap: 8px;
+
+    
+  .cart-header-selected-button {   
+    background-color: rgb(234, 124, 105, 1);
+    color: $primary-font-color;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid $primary-bg;
+   }
+  
+  .cart-header-button {
+    color: $accent-color;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: 1px solid $primary-bg;
+    background-color: $secondary-bg;
+   }
+}
+
+
+.cart-header-titles-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+
+    .cart-header-p {
+      color: $primary-font-color;
+      font-family: $primary-cart-font-family;
+      font-size: 16px;
+    }
+
+    .cart-left-titles-container {
+      display: flex;
+      gap: 20px;
+
+    }
+}
