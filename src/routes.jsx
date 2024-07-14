@@ -12,7 +12,7 @@ const routes = [
     element: <HomePage />,
   },
   {
-    path: "/dashborad",
+    path: "/dashboard",
     element: (
    <AmodTree />
     ),
