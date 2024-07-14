@@ -3,7 +3,7 @@ import SignupPage from "./pages/SignupPage/SignupPage.jsx";
 import LoginPage from "./pages/LoginPage/LoginPage.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import SettingsPage from "./pages/SettingsPage/SettingsPage.jsx";
-import AmodTree from './components/AnalyticsMostOrderedDishes/AmodTree.jsx';
+import AmodTree from './components/AnalyticsMostOrderedDishes/Amod.jsx';
 
 const routes = [
   {
