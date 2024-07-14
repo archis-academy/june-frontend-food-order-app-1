@@ -14,4 +14,4 @@ const App = () => {
 };
 
 // eslint-disable-next-line react/no-deprecated
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
