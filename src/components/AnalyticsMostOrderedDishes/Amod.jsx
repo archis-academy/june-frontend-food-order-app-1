@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-// AmodTree.jsx
 import React, { useState } from 'react';
 import './amod.scss'; 
+
 
 
 const AmodTree = () => {
@@ -31,21 +31,21 @@ const AmodTree = () => {
       <div className="amod-menu">
         <div className="amod-menu-item-container">
           <div className="amod-menu-item-noodles">
-            {/* <img src={noodles}  alt="Noodles" /> */}
+            <img  alt="Noodles" />
             <div className="amod-menu-item-text">
               <p>Spicy seasoned seafood noodles</p>
               <p className="under">{data[timePeriod][0]}</p>
             </div>
           </div>
           <div className="amod-menu-item-mushroom">
-            <img src="" alt="Mushroom" />
+            <img  alt="Mushroom" />
             <div className="amod-menu-item-text">
               <p>Salted Fried Mushroom</p>
               <p className="under">{data[timePeriod][1]}</p>
             </div>
           </div>
           <div className="amod-menu-item-beef">
-            <img src="./image/image-3.svg" alt="Beef" />
+            <img  alt="Beef" />
             <div className="amod-menu-item-text">
               <p>Beef Dumpling in Hot and Sour Soup</p>
               <p className="under">{data[timePeriod][2]}</p>
