@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './amod.scss'; 
 
+
 const AmodTree = () => {
   const [timePeriod, setTimePeriod] = useState("1");
 
@@ -30,14 +31,14 @@ const AmodTree = () => {
       <div className="amod-menu">
         <div className="amod-menu-item-container">
           <div className="amod-menu-item-noodles">
-            <img src="./image/image-1.svg" alt="Noodles" />
+            {/* <img src={noodles}  alt="Noodles" /> */}
             <div className="amod-menu-item-text">
               <p>Spicy seasoned seafood noodles</p>
               <p className="under">{data[timePeriod][0]}</p>
             </div>
           </div>
           <div className="amod-menu-item-mushroom">
-            <img src="./image/image-2.svg" alt="Mushroom" />
+            <img src="" alt="Mushroom" />
             <div className="amod-menu-item-text">
               <p>Salted Fried Mushroom</p>
               <p className="under">{data[timePeriod][1]}</p>

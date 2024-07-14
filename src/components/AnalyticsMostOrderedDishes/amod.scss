@@ -10,7 +10,11 @@ body {
   border-radius: 8px 0px 0px 0px;
   opacity: 0px;
   background: rgba(31, 29, 43, 1);
-
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  
   .amod-container {
     display: flex;
     width: (324px);
@@ -19,13 +23,14 @@ body {
     opacity: 0px;
     align-items: center;
     justify-content: center;
-
+    margin-left: 24px;
     h1 {
       color: white;
       font-family: "Barlow", sans-serif;
       font-size: 20px;
       font-weight: 600;
       line-height: 28px;
+      white-space: nowrap;
     }
 
     .amod-filter {
@@ -63,7 +68,7 @@ body {
         margin-bottom: 24px;
 
         img {
-          background-color: transparent; // Ensure the background is transparent
+          background-color: transparent;
         }
 
         .amod-menu-item-text {

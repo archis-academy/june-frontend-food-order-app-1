@@ -1,11 +1,9 @@
-/* eslint-disable react-refresh/only-export-components */
-
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
+// dashboard.jsx
 import React from "react";
-import ReactDOM from "react-dom";
 import AmodTree from "../../components/AnalyticsMostOrderedDishes/Amod";
 
-const App = () => {
+const Dashboard = () => {
   return (
     <div>
       <AmodTree />
@@ -13,5 +11,4 @@ const App = () => {
   );
 };
 
-// eslint-disable-next-line react/no-deprecated
-ReactDOM.render(<App />, document.getElementById('root'));
+export default Dashboard;
