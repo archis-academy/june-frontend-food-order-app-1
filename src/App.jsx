@@ -1,4 +1,4 @@
-import AmodTree from "./components/AnalyticsMostOrdered Dishes/Amod.jsx";
+import AmodTree from "./components/AnalyticsMostOrderedDishes/Amod.jsx";
 import HomePage from "./pages/HomePage/HomePage";
 
 function App() {

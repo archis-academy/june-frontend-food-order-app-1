@@ -3,7 +3,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import ReactDOM from "react-dom";
-import AmodTree from "../../components./AnalyticsMostOrderedDishes./Amod.jsx";
+import AmodTree from "../../components/AnalyticsMostOrderedDishes/Amod";
 
 const App = () => {
   return (
