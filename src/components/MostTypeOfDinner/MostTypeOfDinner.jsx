@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import Chart from "react-apexcharts";
+import ReactApexChart from "react-apexcharts";
 import "./mto.scss";
 
 const ApexChartComponent = ({ series }) => {
@@ -40,7 +40,7 @@ const ApexChartComponent = ({ series }) => {
 
   return (
     <div>
-      <Chart options={options} series={series} type="radialBar"/>
+      <ReactApexChart options={options} series={series} type="radialBar"/>
     </div>
   );
 };
