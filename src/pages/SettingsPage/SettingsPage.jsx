@@ -1,33 +1,39 @@
-import "./SettingsSidebar.scss";
-import { NavLink } from "react-router-dom";
-import tabs from "./Tabs";
+import { useParams } from "react-router-dom";
+import ProductsManagement from "../../components/ProductManagment/ProductManagment";
+import SettingsSidebar from "../../components/SettingsSidebar/SettingsSidebar";
+import "./SettingsPage.scss";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import Appearance from "../../components/Appearance/Appearance";
+import YourRestaurant from "../../components/YourRestaurant/YourRestaurant";
+import Notifications from "../../components/Notifications/Notifications";
+import SecurityPage from "../../components/SecurityPage/SecurityPage";
+import AboutUs from "../../components/AboutUs/AboutUs";
+function SettingsPage() {
+  const { tabName } = useParams();
 
-function SettingsSidebar() {
+  const settingComponents = {
+    "appereance": <Appearance />,
+    "your-restaurant": <YourRestaurant />,
+    "products-management": <ProductsManagement />,
+    "notifications": <Notifications />,
+    "security": <SecurityPage />,
+    "about-us": <AboutUs />,
+  };
+
   return (
-    <div>
-      <Sidebar/>
-    <div className="sidebar-container">
-      {tabs.map((tab) => (
-        <NavLink
-          key={tab.id}
-          to={tab.path}
-          className={({ isActive }) => {
-            return isActive && "active";
-          }}
-        >
-          <div className="list-group">
-            {tab.icon}
-            <div className="list-title-box">
-              <h4>{tab.title}</h4>
-              <p>{tab.detail}</p>
-            </div>
-          </div>
-        </NavLink>
-      ))}
-    </div>
-    </div>
+    <>
+      <Sidebar />
+      <main className="settings-page">
+        <h1>Settings</h1>
+        <div className="main-container">
+          <SettingsSidebar />
+          {settingComponents[tabName]
+            ? settingComponents[tabName]
+            : settingComponents["products-management"]}
+        </div>
+      </main>
+    </>
   );
 }
 
-export default SettingsSidebar;
+export default SettingsPage;

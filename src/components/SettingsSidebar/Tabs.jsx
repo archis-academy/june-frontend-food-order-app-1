@@ -13,7 +13,7 @@ const tabs = [
     icon: appearance,
     title: "Appearance",
     detail: "Dark and light mode, font size",
-    path: "/settings/appearance",
+    path: "/settings/appereance",
   },
   {
     id: 2,

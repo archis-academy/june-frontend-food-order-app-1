@@ -1,4 +1,4 @@
 @import "../../styles/abstracts/index";
 .about-us-container {
-  @extend %settings-container;
+  @extend %settings-container !optional;
 }
