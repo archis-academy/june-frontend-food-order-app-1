@@ -1,4 +1,5 @@
 import Sidebar from "@/components/Sidebar/Sidebar";
+import Header from "@/components/Header/Header";
 import "./HomePage.scss";
 
 function HomePage() {
@@ -6,7 +7,7 @@ function HomePage() {
     <div>
       <Sidebar />
       <div className="mainRoot">
-        <h1 style={{ height: "1600px" }}>Homepage example</h1>
+        <Header />
       </div>
     </div>
   );
