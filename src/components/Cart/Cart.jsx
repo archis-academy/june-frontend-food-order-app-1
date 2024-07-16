@@ -1,13 +1,18 @@
 import CartHeader from "./CartHeader";
 import "./cart.scss"
+import CartContent from "./CartContent";
 
-function Cart() {
+const Cart = ({cartProducts,setCartProducts}) => {
    
     return (
-      <div className="cart-container">
+     <div className="cart-all-container">
+       <div className="cart-container">
         <CartHeader/>
+        <CartContent cartProducts={cartProducts} setCartProducts={setCartProducts}/>
         
-      </div>
+       </div>
+     </div> 
+     
     );
 };
 

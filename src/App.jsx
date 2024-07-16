@@ -1,15 +1,14 @@
 import HomePage from "./pages/HomePage/HomePage";
-import Cart from "./components/Cart/Cart"; 
 import "./app.scss"
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
-    <div className="app-container">
-      <Cart/>
-      <HomePage/>
+    <>
+    
+    </>
     
 
-    </div>
   );
 }
 
