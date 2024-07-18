@@ -1,6 +1,7 @@
 import CartHeader from "./CartHeader";
 import "./cart.scss"
 import CartContent from "./CartContent";
+import CartFooter from "./CartFooter";
 
 const Cart = ({cartProducts,setCartProducts}) => {
    
@@ -9,7 +10,7 @@ const Cart = ({cartProducts,setCartProducts}) => {
        <div className="cart-container">
         <CartHeader/>
         <CartContent cartProducts={cartProducts} setCartProducts={setCartProducts}/>
-        
+        <CartFooter/>
        </div>
      </div> 
      
