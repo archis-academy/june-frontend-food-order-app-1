@@ -1,7 +1,6 @@
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Header from "@/components/Header/Header";
 import "./HomePage.scss";
-
 function HomePage() {
   return (
     <div>
@@ -9,6 +8,7 @@ function HomePage() {
       <div className="mainRoot">
         <Header />
       </div>
+      
     </div>
   );
 }
