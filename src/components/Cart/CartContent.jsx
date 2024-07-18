@@ -5,7 +5,12 @@ const CartContent = ({cartProducts,setCartProducts}) => {
         console.log(cartProducts)        
     }, [cartProducts]);
 
-    
+    const [quantity,setQuantity] = useState(1);
+
+    const quantityHandler = (event) => {
+      setQuantity(event.target.value);
+    } 
+
     function removeFromCart(product) {
        const updatedCart = cartProducts.filter((cartProduct) => cartProduct !== product);
        setCartProducts(updatedCart);
@@ -26,8 +31,8 @@ const CartContent = ({cartProducts,setCartProducts}) => {
                                 </div>
                             </div>
                             <div className="cart-product-qty-total-container">
-                                <input className="cart-product-qty" type="text" placeholder="1" />
-                                <p>${product.price}</p>
+                                <input className="cart-product-qty" type="text" onChange={quantityHandler} placeholder="1" />
+                                <p>${(quantity * product.price)}</p>
                             </div>
                         </div>
                         <div className="cart-product-note-container">
