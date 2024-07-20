@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
-// dashboard.jsx
-import React from "react";
+import MTOChartSection from "../../components/MostTypeOfDinner/MostTypeOfDinner";
 import AmodTree from "../../components/AnalyticsMostOrderedDishes/Amod";
-
-const Dashboard = () => {
+function DashBoard() {
   return (
     <div>
+      <MTOChartSection />
       <AmodTree />
     </div>
   );
-};
+}
 
-export default Dashboard;
+export default DashBoard;
