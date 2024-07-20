@@ -13,8 +13,8 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1000;
-  margin: 24px 24px 24px 24px;
+  margin: 24px 24px 24px 24px ;
+  transform: scale(1);
   .amod-container {
     display: flex;
     width: 340px;
