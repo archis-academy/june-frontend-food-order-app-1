@@ -58,10 +58,8 @@ body {
       width: 324px;
       height: 293px;
       margin: 20px 24px 24px 24px;
-
-      .amod-menu-item-noodles,
-      .amod-menu-item-mushroom,
-      .amod-menu-item-beef {
+       
+      .amod-menu-item {
         display: flex;
         gap: 12px;
         width: 199px;
@@ -118,7 +116,7 @@ body {
           &:hover {
             background-color: transparent;
             border: 1px solid rgba(234, 124, 105, 1);
-            transition-duration: 2s;
+            transition-duration: 0.3s;
             color: rgba(234, 124, 105, 1);
           }
         }

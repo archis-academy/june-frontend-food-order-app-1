@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './amod.scss'; 
-import Food1 from "../../assets/Amodimage/image-2.png"
-import Food2 from "../../assets/Amodimage/image-3.png"
-import Food3 from "../../assets/Amodimage/image1.png"
-
+import noodles from "../../assets/Amodimage/image-2.png"
+import Mushroom from "../../assets/Amodimage/image-3.png"
+import Beef from "../../assets/Amodimage/image1.png"
+import { Link } from 'react-router-dom';
 
 const AmodTree = () => {
   const [timePeriod, setTimePeriod] = useState("1");
@@ -32,29 +32,31 @@ const AmodTree = () => {
       <div className="amod-dvider"></div>
       <div className="amod-menu">
         <div className="amod-menu-item-container">
-          <div className="amod-menu-item-noodles">
-            <img  src={Food1} alt="Noodles" />
+          <div className="amod-menu-item">
+            <img  src={noodles} alt="Noodles" />
             <div className="amod-menu-item-text">
               <p>Spicy seasoned seafood noodles</p>
               <p className="under">{data[timePeriod][0]}</p>
             </div>
           </div>
-          <div className="amod-menu-item-mushroom">
-            <img src={Food2}  alt="Mushroom" />
+          <div className="amod-menu-item">
+            <img src={Mushroom}  alt="Mushroom" />
             <div className="amod-menu-item-text">
               <p>Salted Fried Mushroom</p>
               <p className="under">{data[timePeriod][1]}</p>
             </div>
           </div>
-          <div className="amod-menu-item-beef">
-            <img  src={Food3} alt="Beef" />
+          <div className="amod-menu-item">
+            <img  src={Beef} alt="Beef" />
             <div className="amod-menu-item-text">
               <p>Beef Dumpling in Hot and Sour Soup</p>
               <p className="under">{data[timePeriod][2]}</p>
             </div>
           </div>
           <div className="amod-button">
+            <Link to="/"> 
             <button>View All</button>
+            </Link>
           </div>
         </div>
       </div>

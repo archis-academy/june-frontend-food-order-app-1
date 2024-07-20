@@ -14,7 +14,7 @@ const routes = [
   {
     path: "/dashboard",
     element: (
-   <Dashboard />
+     <Dashboard />
     ),
 
   },
