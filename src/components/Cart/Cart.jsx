@@ -10,7 +10,6 @@ const Cart = ({cartProducts,setCartProducts}) => {
        <div className="cart-container">
         <CartHeader/>
         <CartContent cartProducts={cartProducts} setCartProducts={setCartProducts}/>
-        <CartFooter/>
        </div>
      </div> 
      
