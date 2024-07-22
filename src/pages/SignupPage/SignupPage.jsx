@@ -1,5 +1,7 @@
+//REACT
 import "./SignupPage.scss";
 import { useState } from "react";
+import Sidebar from "@/components/Sidebar/Sidebar";
 
 function SignupPage() {
   const [formData, setFormData] = useState({
@@ -7,6 +9,7 @@ function SignupPage() {
     password: "",
     confirmPassword: "",
   });
+  const [isConfirmVisible,setIsConfirmVisible] = useState(false)
 
   function handleChange(event) {
     setFormData({
@@ -15,12 +18,31 @@ function SignupPage() {
     });
   }
 
+  const userData = JSON.parse(localStorage.getItem('users')) || [];
+
+  function signUp() {
+    if (formData.password == formData.confirmPassword) {
+      localStorage.setItem('users', JSON.stringify([...userData , {email: formData.email, password:formData.password}]));
+      setIsConfirmVisible(false)
+    } else {
+      setIsConfirmVisible(true)
+    }
+  }
+
   return (
-    <main className="signup-page">
-      <input onKeyUp={(e) => handleChange(e)} name="password" type="password" />
-      <input onKeyUp={(e) => handleChange(e)} name="email" type="email" />
-      <h1>Signup Page</h1>
-    </main>
+    <div>
+      <Sidebar />
+      <main className="signup-page">
+        <div className="form-container">
+          <h1>SIGN UP</h1>
+          <input onKeyUp={(e) => handleChange(e)} name="email" type="email" placeholder="Enter Your Email"/>
+          <input onKeyUp={(e) => handleChange(e)} name="password" type="password" placeholder="Enter Your Password"/>
+          <input onKeyUp={(e) => handleChange(e)} name="confirmPassword" type="password" placeholder="Confirm Your Password"/>
+          {isConfirmVisible ? <div className="signup-alert">Passwords do not match. Please try again.</div> : <div></div>}
+          <button onClick={() => signUp()}>Sign Up</button>
+        </div>
+      </main>
+    </div>
   );
 }
 
