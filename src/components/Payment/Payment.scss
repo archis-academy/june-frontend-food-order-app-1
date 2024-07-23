@@ -59,6 +59,10 @@
     gap: 8px;
     flex-wrap: wrap;
 
+    @media (max-width: 1380px) {
+      justify-content: center;
+    }
+
     .methods-card {
       width: 104px;
       min-height: 65px;

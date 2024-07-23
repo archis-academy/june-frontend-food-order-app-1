@@ -1,36 +1,26 @@
-import { useState } from "react";
 import "./Sidebar.scss";
-import leftArrow from "/left-arrow.svg";
+import { NavLink, useLocation } from "react-router-dom";
+import sidebarLinks from "./SidebarLinks";
 
 function Sidebar() {
-  const [isSidebarToggled, setIsSidebarToggled] = useState(false);
-
-  function toggleSidebar() {
-    setIsSidebarToggled(!isSidebarToggled);
-  }
-
+  let location = useLocation();
   return (
-    <aside className={`sidebar ${!isSidebarToggled && "sidebar-collapsed"}`}>
-      {/* these examples should be deleted */}
-      <nav>
+    <aside className="sidebar">
+      <nav className="navbar">
+        <img src="../../public/Logo.png" alt="logo" className="logo" />
         <ul>
-          <li className="left-arrow" onClick={toggleSidebar}>
-            <img
-              src={leftArrow}
-              style={{
-                transform: !isSidebarToggled
-                  ? "rotateY(180deg)"
-                  : "rotateY(0deg)",
-              }}
-            />
-          </li>
-          <li>Link 1</li>
-          <li>Link 2</li>
-          <li>Link 3</li>
-          <li>Link 4</li>
+          {sidebarLinks.map((link, index) => (
+            <li key={index} className="navbar-items">
+              <NavLink
+                to={link.path}
+                className={link.path === location.pathname ? "nav-item active-link" : "nav-item"}
+              >
+                {link.icon}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
-      {/* these examples should be deleted */}
     </aside>
   );
 }

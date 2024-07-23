@@ -4,34 +4,13 @@ import Modal from "react-modal";
 import Button from "../../components/Button/Button";
 import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 
-// const customStyles = {
-//   overlay: { backgroundColor: "#000000B2" },
-//   content: {
-//     position: "fixed",
-//     top: "0",
-//     left: "73%",
-//     right: "0",
-//     bottom: "0",
-//     backgroundColor: "#1F1D2B",
-//     border: "1px solid #1F1D2B",
-//     // marginRight: "0",
-//     // transform: "translate(-50%, -50%)",
-//   },
-// };
-
 Modal.setAppElement("#root");
 
 function Payment() {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {}
-
-  function closeModal() {
-    setIsOpen(false);
+  function modalHandler() {
+    setIsOpen(!modalIsOpen);
   }
 
   const [selectedButton, setSelectedButton] = useState(null);
@@ -40,19 +19,43 @@ function Payment() {
     setSelectedButton(buttonId);
   };
 
+  const [cardNumValue, setCardNumValue] = useState("");
+
+  const handleCardNumChange = (e) => {
+    let value = e.target.value;
+
+    value = value.replace(/\D/g, "");
+
+    value = value.replace(/(\d{4})(?=\d)/g, "$1 ");
+
+    setCardNumValue(value);
+  };
+
+  const [expriyValue, setExpriyValue] = useState("");
+
+  const handleExpriyChange = (e) => {
+    let value = e.target.value;
+
+    value = value.replace(/\D/g, "");
+
+    if (value.length > 2) {
+      value = value.slice(0, 2) + "/" + value.slice(2);
+    }
+
+    setExpriyValue(value);
+  };
+
   const dropdownItems = ["To Go", "Dine In", "Delivery"];
 
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
+      <button onClick={modalHandler}>Open Modal</button>
       <Modal
         className="payment-modal"
         overlayClassName="payment-modal-overlay"
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        // style={customStyles}
-        contentLabel="Example Modal"
+        onRequestClose={modalHandler}
+        contentLabel="Payment Modal"
       >
         <div className="header">
           <h1 className="header-title">Payment</h1>
@@ -116,6 +119,8 @@ function Payment() {
               <input
                 type="tel"
                 className="information-inputs"
+                value={cardNumValue}
+                onChange={handleCardNumChange}
                 pattern="\d{4}[\s\-]?\d{4}[\s\-]?\d{4}[\s\-]?\d{4}"
                 maxLength="19"
                 required
@@ -128,8 +133,10 @@ function Payment() {
                   type="text"
                   id="input-date"
                   className="information-inputs"
-                  maxLength="5"
+                  maxLength="7"
                   placeholder="MM/YYYY"
+                  value={expriyValue}
+                  onChange={handleExpriyChange}
                   required
                 />
               </label>
@@ -164,7 +171,7 @@ function Payment() {
 
         <div className="btn-box">
           <Button
-            onClick={closeModal}
+            onClick={modalHandler}
             width="175px"
             height="50px"
             variant="secondary"
