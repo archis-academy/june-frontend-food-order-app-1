@@ -1,4 +1,4 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ProductsManagement from "../../components/ProductManagment/ProductManagment";
 import SettingsSidebar from "../../components/SettingsSidebar/SettingsSidebar";
 import "./SettingsPage.scss";
@@ -15,15 +15,13 @@ function SettingsPage() {
   const settingComponents = {
     "appearance": <Appearance />,
     "your-restaurant": <YourRestaurant />,
-    "product-management": <ProductsManagement />, 
+    "product-management": <ProductsManagement />,
     "notifications": <Notifications />,
     "security": <SecurityPage />,
     "about-us": <AboutUs />,
   };
 
-  if (!tabName) {
-    return <Navigate to="/settings/product-management" replace />;
-  }
+
 
   return (
     <>

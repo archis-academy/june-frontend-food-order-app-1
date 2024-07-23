@@ -27,7 +27,7 @@ const routes = [
     element: <LoginPage />,
   },
   {
-  path: "/settings:tabName",
+  path: "/settings/:tabName",
   element: <SettingsPage />
   },
 
