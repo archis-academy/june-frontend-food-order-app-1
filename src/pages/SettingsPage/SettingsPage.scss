@@ -12,11 +12,12 @@
     margin-bottom: 25px;
     font-weight: 600;
     font-size: 28px;
+    margin-left: 20px; 
   }
 }
+
 .main-container {
   display: flex;
-  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
@@ -26,4 +27,7 @@
   .main-container {
     flex-direction: column;
   }
+}
+.selected-tab {
+  justify-content: flex-start;
 }

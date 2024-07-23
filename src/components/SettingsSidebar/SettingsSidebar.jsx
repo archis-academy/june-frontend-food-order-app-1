@@ -1,18 +1,18 @@
 import "./SettingsSidebar.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import tabs from "./Tabs";
 
 function SettingsSidebar() {
+  const location = useLocation();
+  const defaultTab = "/settings/product-management";
+
   return (
-    <div>
     <div className="sidebar-container">
       {tabs.map((tab) => (
         <NavLink
           key={tab.id}
           to={tab.path}
-          className={({ isActive }) => {
-            return isActive && "active";
-          }}
+          className={({ isActive }) => (isActive || (location.pathname === "/settings" && tab.path === defaultTab) ? "active" : "")}
         >
           <div className="list-group">
             {tab.icon}
@@ -23,7 +23,6 @@ function SettingsSidebar() {
           </div>
         </NavLink>
       ))}
-    </div>
     </div>
   );
 }
