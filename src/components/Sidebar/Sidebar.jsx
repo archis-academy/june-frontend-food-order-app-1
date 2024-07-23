@@ -4,7 +4,7 @@ import sidebarLinks from "./SidebarLinks";
 
 function Sidebar() {
   let location = useLocation();
-  let pathnameFirst = location.pathname.split("/")[0];
+  let pathnameFirst = "/" + location.pathname.split("/")[1];
   return (
     <aside className="sidebar">
       <nav className="navbar">
