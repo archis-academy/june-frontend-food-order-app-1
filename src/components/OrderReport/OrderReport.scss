@@ -28,13 +28,17 @@
       padding: 10px 15px;
       text-align: left;
       border-bottom: 1px solid $secondary-bg;
-    }
-    td {
       font-family: "Barlow", sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
       text-align: left;
+
+      .customer-cont {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
     }
 
     th {
@@ -62,6 +66,8 @@
       padding: 5px 10px;
       text-align: center;
       display: inline-block;
+      width: 92px;
+      height: 26px;
 
       &.completed {
         background-color: #6be2be3d;
