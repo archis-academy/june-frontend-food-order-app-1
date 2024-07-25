@@ -53,10 +53,3 @@ function DropdownMenu({ items }) {
 }
 
 export default DropdownMenu;
-
-// DropdownMenu componentini kullanacağınız fonksiyonda items prop'u ile dropdown menüde gösterilecek öğeleri belirtin.
-// Örneğin:
-// const dropdownItems = ['Item 1', 'Item 2', 'Item 3'];
-// Sonra DropdownMenu componentini nerede kullanacaksanız oraya
-// <DropdownMenu items={dropdownItems} />
-// yazın.

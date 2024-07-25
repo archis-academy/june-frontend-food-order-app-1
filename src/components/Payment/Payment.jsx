@@ -165,7 +165,7 @@ function Payment() {
           </div>
           <div className="table-no-box">
             <p className="table-no-text">Table no.</p>
-            <input type="number" className="table-no-input" />
+            <input type="number" min={0} className="table-no-input" />
           </div>
         </div>
 
