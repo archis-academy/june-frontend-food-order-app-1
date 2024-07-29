@@ -1,17 +1,18 @@
 import "./LoginPage.scss";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function LoginPage() {
 
-  const [isLogin, setIsLogin] = useState(false);
-  const [isTrue, setIsTrue] = useState(false);
-  const userData = JSON.parse(localStorage.getItem('users')) || { email: "hasimgorucu@gmail.com", password: "123456" };
+  const [isFalse, setIsFalse] = useState(false);
+  const userData = JSON.parse(localStorage.getItem('users')) || [{ email: "hasimgorucu@gmail.com", password: "123456" }];
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   function handleChange(event) {
     setFormData({
@@ -25,11 +26,10 @@ function LoginPage() {
   )
 
   function login() {
-    setIsTrue(true)
     if (user) {
-      setIsLogin(true)
+      navigate("/", { replace: true })
     } else {
-      setIsLogin(false)
+      setIsFalse(true)
     }
   }
 
@@ -41,8 +41,8 @@ function LoginPage() {
           <h1>LOGIN</h1>
           <input onKeyUp={(e) => handleChange(e)} name="email" type="email" placeholder="Enter Your Email" />
           <input onKeyUp={(e) => handleChange(e)} name="password" type="password" placeholder="Enter Your Password" />
-          {isTrue ? <div className="login-alert">{isLogin ? "Login successful" : "Username or password is incorrect"}</div> : <div></div>}
-          <button onClick={() => login()}>Sign Up</button>
+          {isFalse ? <div className="login-alert">Username or password is incorrect</div> : <div></div>}
+          <button onClick={() => login()}>Login</button>
         </div>
       </main>
     </div>

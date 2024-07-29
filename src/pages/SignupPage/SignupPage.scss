@@ -48,6 +48,7 @@ h1 {
     color: white;
     font-family: $primary-font;
     font-weight: bold;
+    transition: all 0.5s;
   }
   button:hover {
     box-shadow: 2px 2px 16px #ea7c69, -2px -2px 16px #ea7c69;
