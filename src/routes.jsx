@@ -11,14 +11,18 @@ const routes = [
   {
     path: "/",
     element: (
+      <ProtectedRoute>
         <HomePage />
+        </ProtectedRoute>
     ),
   },
   
   {
     path: "/dashboard",
     element: (
+      <ProtectedRoute>
       <DashBoard />
+      </ProtectedRoute> 
     ),
   },
   {

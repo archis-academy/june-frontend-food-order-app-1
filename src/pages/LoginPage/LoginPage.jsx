@@ -1,5 +1,4 @@
 import "./LoginPage.scss";
-import Sidebar from "@/components/Sidebar/Sidebar";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -27,6 +26,7 @@ function LoginPage() {
 
   function login() {
     if (user) {
+      localStorage.setItem('currentuser', user.username);
       navigate("/", { replace: true })
     } else {
       setIsFalse(true)
@@ -35,12 +35,12 @@ function LoginPage() {
 
   return (
     <div>
-      <Sidebar />
       <main className="login-page">
         <div className="form-container">
           <h1>LOGIN</h1>
           <input onKeyUp={(e) => handleChange(e)} name="email" type="email" placeholder="Enter Your Email" />
           <input onKeyUp={(e) => handleChange(e)} name="password" type="password" placeholder="Enter Your Password" />
+          <div className="signup-alert"><span>Dont you have an account? / </span><Link to={"/signup"} style={{fontWeight:"bold"}}> Sign Up</Link></div>
           {isFalse ? <div className="login-alert">Username or password is incorrect</div> : <div></div>}
           <button onClick={() => login()}>Login</button>
         </div>

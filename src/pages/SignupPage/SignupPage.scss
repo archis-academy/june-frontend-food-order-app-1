@@ -3,6 +3,7 @@ $primary-font: "Outfit", sans-serif;
 h1 {
   color: white;
   font-family: $primary-font;
+  font-size: 48px;
 }
 
 .signup-page {
@@ -17,7 +18,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   width: 800px;
   max-width: 800px;
   padding: 50px;
@@ -49,6 +50,7 @@ h1 {
     font-family: $primary-font;
     font-weight: bold;
     transition: all 0.5s;
+    cursor: pointer;
   }
   button:hover {
     box-shadow: 2px 2px 16px #ea7c69, -2px -2px 16px #ea7c69;

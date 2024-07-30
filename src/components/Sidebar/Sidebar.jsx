@@ -4,6 +4,10 @@ import sidebarLinks from "./SidebarLinks";
 
 function Sidebar() {
   let location = useLocation();
+  function logout() {
+    localStorage.removeItem("currentuser");
+  }
+
   return (
     <aside className="sidebar">
       <nav className="navbar">
@@ -12,7 +16,8 @@ function Sidebar() {
           {sidebarLinks.map((link, index) => (
             <li key={index} className="navbar-items">
               <NavLink
-                to={link.path}
+                to={link.path == "/logout" ? "/login" : link.path}
+                onClick={link.path == "/logout" ? logout : null}
                 className={link.path === location.pathname ? "nav-item active-link" : "nav-item"}
               >
                 {link.icon}

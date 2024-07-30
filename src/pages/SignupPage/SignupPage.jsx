@@ -1,12 +1,12 @@
 //REACT
 import "./SignupPage.scss";
 import { useState } from "react";
-import Sidebar from "@/components/Sidebar/Sidebar";
 import { Link, useNavigate } from "react-router-dom";
 
 function SignupPage() {
   const [formData, setFormData] = useState({
     email: "",
+    username: "",
     password: "",
     confirmPassword: "",
   });
@@ -29,7 +29,7 @@ function SignupPage() {
         setPasswordAlert("This email is already used")
         setIsConfirmVisible(true)
       } else {
-        localStorage.setItem('users', JSON.stringify([...userData, { email: formData.email, password: formData.password }]));
+        localStorage.setItem('users', JSON.stringify([...userData, { email: formData.email, username: formData.username,password: formData.password}]));
         setIsConfirmVisible(false)
         navigate("/login", { replace: true })
       }
@@ -40,14 +40,15 @@ function SignupPage() {
 
   return (
     <div>
-      <Sidebar />
       <main className="signup-page">
         <div className="form-container">
           <h1>SIGN UP</h1>
           <input onKeyUp={(e) => handleChange(e)} name="email" type="email" placeholder="Enter Your Email" />
+          <input onKeyUp={(e) => handleChange(e)} name="username" type="text" placeholder="Enter Your User Name" />
           <input onKeyUp={(e) => handleChange(e)} name="password" type="password" placeholder="Enter Your Password" />
           <input onKeyUp={(e) => handleChange(e)} name="confirmPassword" type="password" placeholder="Confirm Your Password" />
           {isConfirmVisible ? <div className="signup-alert">{passwordAlert}</div> : <div></div>}
+          <div className="signup-alert"><span>Do you have an account? / </span><Link to={"/login"} style={{fontWeight:"bold"}}> Login</Link></div>
           <button onClick={() => signUp()}>Sign Up</button>
         </div>
       </main>

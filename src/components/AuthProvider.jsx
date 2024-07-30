@@ -2,10 +2,10 @@ import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext(null);
 
-function AuthProvider({ children, isSingedIn }) {
-  console.log(AuthContext);
+function AuthProvider({ children }) {
+  const currentuser = localStorage.getItem("currentuser")
 
-  const [user] = useState(isSingedIn ? { name: "John Doe" } : null);
+  const [user] = useState(currentuser != null ? { name: currentuser } : null);
 
   return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
 }
