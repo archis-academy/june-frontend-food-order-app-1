@@ -1,7 +1,5 @@
 
-body {
-  background-color: rgba(37, 40, 54, 1);
-}
+
 /* Most Type of Dınner Start */
 .mto-tree {
   width: 372px;
@@ -13,10 +11,8 @@ body {
   background: rgba(31, 29, 43, 1);
   color: white;
 
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
 
+  margin-top: 28px;
   .mto-head {
     display: flex;
     align-items: center;
@@ -25,8 +21,6 @@ body {
     .mto-head-text {
       width: 165px;
       height: 28px;
-      gap: 0px;
-      opacity: 0px;
       font-family: "Barlow", sans-serif;
       font-size: 20px;
       font-weight: 600;

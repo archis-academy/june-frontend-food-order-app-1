@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './amod.scss'; 
+
 import noodles from "../../assets/Amodimage/image-2.png"
 import Mushroom from "../../assets/Amodimage/image-3.png"
 import Beef from "../../assets/Amodimage/image1.png"
