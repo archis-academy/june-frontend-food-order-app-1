@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 import CartFooter from "./CartFooter";
 
 const CartContent = ({ cartProducts, setCartProducts }) => {
-    const [cartContentProducts, setCartContentProducts] = useState(cartProducts.map((product) => ({ ...product, quantity: 1 })));
-
+    const [cartContentProducts, setCartContentProducts] = useState(cartProducts);
+ 
     useEffect(() => {
-        setCartContentProducts(cartProducts.map((product) => ({ ...product, quantity: 1 })));
+        setCartContentProducts(cartProducts)
     }, [cartProducts]);
 
-   
     const quantityHandler = (product, event) => {
         const newQuantity = parseInt(event.target.value) || 1;
 
