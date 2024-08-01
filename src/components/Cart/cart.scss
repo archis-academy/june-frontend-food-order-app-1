@@ -5,17 +5,6 @@ $primary-cart-font-family: "Barlow", sans-serif;
   display: none;
 }
 
-.cart-opener-svg-container {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  z-index: 10;
-}
-
-.cart-opener-svg-close {
-  display: none;
-}
-
 .cart-all-container {
   position: absolute;
   top: 0;
@@ -91,14 +80,21 @@ $primary-cart-font-family: "Barlow", sans-serif;
   .cart-products-container {
     height: 380px;
     overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      display: none;
+    }
   }
-
-
 
   .cart-products-container::-webkit-scrollbar {
-    width: 0;
+    width: 0px;
+    border-radius: 0px;
+    display: none;
   }
-
+  
   .cart-product-mapped-data-container {
     display: flex;
     justify-content: space-between;

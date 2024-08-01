@@ -1,4 +1,5 @@
 import Sidebar from "@/components/Sidebar/Sidebar";
+import Header from "@/components/Header/Header";
 import "./HomePage.scss";
 import { useState, useEffect } from "react";
 import img1 from "/pasta1.png"
@@ -22,6 +23,8 @@ function HomePage() {
       price: 5,
     },
   ]
+
+  const [openCart, setCartOpen] = useState(false);
 
   const [cartProducts, setCartProducts] = useState(
     JSON.parse(localStorage.getItem("cartProducts")) || []
@@ -69,8 +72,10 @@ function HomePage() {
   return (
     <div>
       <Sidebar />
-      <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} />
       <div className="mainRoot">
+        <Header openCart={openCart}  setCartOpen={setCartOpen} />
+        <Cart cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
+
         <div>
           {products.map((product) => (
             <div key={product.id}>
