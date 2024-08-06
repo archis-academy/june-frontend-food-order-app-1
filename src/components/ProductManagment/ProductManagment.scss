@@ -8,6 +8,20 @@
   padding: 25px;
   overflow-y: auto;
 }
+.management-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.management-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 80px;
+}
+
+.management-container {
+  padding: 20px;
+}
 
 .header-sticky {
   top: 0;
@@ -36,4 +50,20 @@
   p {
     font-size: 16px;
   }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $secondary-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent-color;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary-bg;
 }

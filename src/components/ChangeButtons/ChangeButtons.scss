@@ -5,6 +5,7 @@
   background-color: $secondary-bg;
   position: sticky;
   bottom: 0;
+  z-index: 1000;
 }
 .save-changes {
   @include primary-btn;
