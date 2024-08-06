@@ -67,3 +67,60 @@
 ::-webkit-scrollbar-thumb:hover {
   background: $secondary-bg;
 }
+
+@media (max-width: 768px) {
+  .management-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .management-layout {
+    flex-direction: column;
+  }
+
+  .product-cards-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .add-dish-card {
+    span {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .management-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .management-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .management-content {
+    padding-bottom: 60px;
+  }
+
+  .product-cards-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .add-dish-card {
+    gap: 15px;
+
+    span {
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
