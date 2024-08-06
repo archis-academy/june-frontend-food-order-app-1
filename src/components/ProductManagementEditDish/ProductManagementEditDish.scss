@@ -1,0 +1,47 @@
+@import "../../styles/abstracts/variables";
+
+.edit-dish-container {
+}
+
+.content-container {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .content-box {
+    .informations {
+      font-family: $primary-font;
+      color: $primary-font-color;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .information-inputs {
+        height: 48px;
+        border: 1px solid $primary-bg;
+        border-radius: 8px;
+        background-color: $input-color;
+        padding: 14px;
+        font-family: $primary-font;
+        font-size: 14px;
+        line-height: 20px;
+        // color: $tertiary-font-color;
+        max-width: 470px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.btn-container {
+  margin: auto;
+  max-width: 420px;
+  display: flex;
+  justify-content: space-between;
+  #cancel-btn {
+    box-shadow: none;
+  }
+}
