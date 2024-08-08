@@ -24,6 +24,7 @@
   padding: 20px;
   width: 410px;
   position: relative;
+  overflow-y: auto;
 }
 .header {
   .header-title {
@@ -203,7 +204,9 @@
 .btn-box {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  max-width: 370px;
+  flex: 1;
+  width: 100%;
   margin-top: 16px;
   position: absolute;
   bottom: 0;
