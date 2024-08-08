@@ -1,3 +1,26 @@
+body {
+  background-color: rgba(37, 40, 54, 1);
+}
+.dashboard {
+  position: relative;
+}
+.right-side {
+  width: 375px;
+  height: 790px;
+  position: absolute;
+  top: 24px;
+  right: 15px;
+}
+.left-side {
+  width: 646px;
+  height: 776px;
+  top: 24px;
+  margin-left: 130px;
+  gap: 24px;
+  position: relative;
+
+  color: white;
+}
 .order-col {
   display: flex;
   flex-direction: column;
