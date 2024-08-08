@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "../Avatar/Avatar";
-import { orders } from "../../db.js";
+import { orders } from "../../db/db.js";
 import "./OrderReport.scss";
 
 const OrderReport = () => {

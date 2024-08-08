@@ -10,16 +10,13 @@ function DashBoard() {
     <div className="dashboard">
       <Sidebar />
       <div className="left-side">
-        
+        <div className="order-col"></div>
         <OrderReport />
       </div>
       <div className="right-side">
         <AmodTree />
-        
-        </div>
-
-        <MTOChartSection />
       </div>
+      <MTOChartSection />
     </div>
   );
 }
