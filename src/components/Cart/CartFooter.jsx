@@ -24,8 +24,8 @@ const CartFooter = ({cartContentProducts}) => {
                     <p className="cart-footer-p"> Subtotal</p>
                     <p className="cart-footer-money-p"> {subtotal} </p>
                 </div>
+                <button onClick={ () => openPayment} className="cart-footer-button"> Continue To Payment </button>
             </div>
-            <button onClick={ () => openPayment} className="cart-footer-button"> Continue To Payment </button>
         </div>
     )
 }

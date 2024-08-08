@@ -4,3 +4,12 @@
   @extend %main-container;
   position: relative;
 }
+
+.cart-payment-container{
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}

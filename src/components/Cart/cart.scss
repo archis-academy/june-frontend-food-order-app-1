@@ -6,14 +6,10 @@ $primary-cart-font-family: "Barlow", sans-serif;
 }
 
 .cart-all-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  max-width: 410px;
-  width: 100%;
+  width: 410px;
   background-color: $secondary-bg;
   padding: 10px 40px;
+  position: relative;
 
   @media screen and (max-width: 430px) {
     padding: 10px;
@@ -21,7 +17,6 @@ $primary-cart-font-family: "Barlow", sans-serif;
   @media screen and (max-width: 350px) {
     padding: 2px;
   }
-  
   
   .cart-header-container {
     display: flex;
@@ -171,6 +166,13 @@ $primary-cart-font-family: "Barlow", sans-serif;
 
   .cart-footer-container {
     margin-top: 20px;
+
+    .cart-footer-info-container{
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 20px;
+      width: 85%;
+    }
 
     .cart-footer-money-container {
       display: flex;

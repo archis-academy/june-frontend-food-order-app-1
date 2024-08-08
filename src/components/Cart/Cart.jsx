@@ -12,7 +12,9 @@ const Cart = ({openCart, setCartOpen, cartProducts, setCartProducts }) => {
 
   return (
     <>
-      <div className={openCart ? "cart-all-container" : "cart-close"}>
+      {/* <div className={openCart ? "cart-all-container" : "cart-close"}> */}
+      <div className="cart-all-container">
+
         <div className="cart-container">
           <CartHeader openCart={openCart} setCartOpen={setCartOpen}/>
           <CartContent cartProducts={cartProducts} setCartProducts={setCartProducts} />

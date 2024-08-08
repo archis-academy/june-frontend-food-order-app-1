@@ -6,6 +6,7 @@ import img1 from "/pasta1.png"
 import img2 from "/pasta2.png"
 import Cart from "../../components/Cart/Cart";
 
+import Payment from "../../components/Payment/Payment";
 
 function HomePage() {
   const products = [
@@ -74,7 +75,10 @@ function HomePage() {
       <Sidebar />
       <div className="mainRoot">
         <Header openCart={openCart}  setCartOpen={setCartOpen} />
-        <Cart cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
+        <div className="cart-payment-container">
+         <Cart cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
+          <Payment />
+        </div>
 
         <div>
           {products.map((product) => (
@@ -85,7 +89,7 @@ function HomePage() {
               <button onClick={() => addToCart(product)}> Add To Cart </button>
             </div>
           ))}
-        </div>
+        </div>        
       </div>
     </div>
   );
