@@ -42,7 +42,7 @@ export const foods = [
     name: "Burger",
     price: 10,
     description: "Tasty",
-    image: "",
+    image: "/src/assets/Foods/beef.svg",
     category: grill,
   },
   {
@@ -50,7 +50,7 @@ export const foods = [
     name: "Pizza",
     price: 15,
     description: "Cheesy",
-    image: "",
+    image: "/src/assets/Foods/healthy-noodle.svg",
     category: grill,
   },
   {
@@ -58,7 +58,7 @@ export const foods = [
     name: "Tacos",
     price: 8,
     description: "appetizer",
-    image: "",
+    image: "/src/assets/Foods/hot-rice.svg",
     category: appetizer,
   },
   {
@@ -66,7 +66,7 @@ export const foods = [
     name: "Waffles",
     price: 7,
     description: "Dessert",
-    image: "",
+    image: "/src/assets/Foods/hot-spicy.svg",
     category: dessert,
   },
   {
@@ -74,7 +74,7 @@ export const foods = [
     name: "Grilled chicken  ",
     price: 15,
     description: "Cold Dishes",
-    image: "",
+    image: "/src/assets/Foods/mushroom.svg",
     category: coldDishes,
   },
   {
@@ -82,7 +82,7 @@ export const foods = [
     name: "Cake with fruits",
     price: 9,
     description: "Dessert",
-    image: "",
+    image: "/src/assets/Foods/noodle-omelette.svg",
     category: dessert,
   },
   {
@@ -90,7 +90,7 @@ export const foods = [
     name: "Spicy Mixed Salad",
     price: 6,
     description: "Cold Dishes",
-    image: "",
+    image: "/src/assets/Foods/noodle-spinach-leaf.svg",
     category: coldDishes,
   },
   {
@@ -98,7 +98,7 @@ export const foods = [
     name: "Lamb steak",
     price: 26,
     description: "Grill",
-    image: "",
+    image: "/src/assets/Foods/noodles.svg",
     category: grill,
   },
   {
@@ -106,31 +106,8 @@ export const foods = [
     name: "Red lentil soup",
     price: 4,
     description: "Soup",
-    image: "",
+    image: "/src/assets/Foods/spicy-instant.svg",
     category: soup,
   },
-  {
-    id: 10,
-    name: "Lamb rib kebab",
-    price: 25,
-    description: "Grill",
-    image: "",
-    category: grill,
-  },
-  {
-    id: 11,
-    name: "Cheesecake with tea ",
-    price: 5,
-    description: "Dessers",
-    image: "",
-    category: dessert,
-  },
-  {
-    id: 12,
-    name: "Tea",
-    price: 5,
-    description: "Tea",
-    image: "",
-    category: coldDishes,
-  },
+
 ];

@@ -27,7 +27,6 @@
     overflow-x: auto;
     width: 100%;
     gap: 26px;
-   
 
     .row {
       display: flex;
@@ -48,16 +47,19 @@
           background-color: rgba(31, 29, 43, 0.7);
           z-index: 1;
           border-radius: 20%;
+         
         }
 
         img {
-       
-          height: 140px;
+          align-items: center;
+          margin: 10px 10px 10px 10px;
           position: relative;
           z-index: 2;
+          background: none;
         }
 
-        h3, p {
+        h3,
+        p {
           margin: 10px 0;
           position: relative;
           z-index: 2;
@@ -79,9 +81,8 @@
 
         &:hover .add-to-cart {
           opacity: 1;
-          box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 
-                      0 0 30px rgba(255, 255, 255, 0.4), 
-                      0 0 45px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+            0 0 30px rgba(255, 255, 255, 0.4), 0 0 45px rgba(255, 255, 255, 0.2);
         }
       }
     }
