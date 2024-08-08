@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const CartFooter = ({cartContentProducts}) => {
     const [subtotal, setSubtotal] = useState(0);
-
+  
     useEffect(() => {
         let updatedSubtotal = 0;
         cartContentProducts.map((product) => (
@@ -11,6 +11,7 @@ const CartFooter = ({cartContentProducts}) => {
         setSubtotal(updatedSubtotal);
     }, [cartContentProducts])
 
+  
 
     return (
         <div className="cart-footer-container">
@@ -24,7 +25,7 @@ const CartFooter = ({cartContentProducts}) => {
                     <p className="cart-footer-money-p"> {subtotal} </p>
                 </div>
             </div>
-            <button className="cart-footer-button"> Continue To Payment </button>
+            <button onClick={ () => openPayment} className="cart-footer-button"> Continue To Payment </button>
         </div>
     )
 }

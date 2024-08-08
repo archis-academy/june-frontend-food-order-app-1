@@ -14,6 +14,14 @@ $primary-cart-font-family: "Barlow", sans-serif;
   width: 100%;
   background-color: $secondary-bg;
   padding: 10px 40px;
+
+  @media screen and (max-width: 430px) {
+    padding: 10px;
+  }
+  @media screen and (max-width: 350px) {
+    padding: 2px;
+  }
+  
   
   .cart-header-container {
     display: flex;
