@@ -29,10 +29,12 @@
   font-size: 14px;
   font-weight: 600;
   color: $accent-color;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 
   &:hover {
     background-color: rgba($accent-color, 0.35);

@@ -77,7 +77,7 @@ export const foods = [
     category: coldDishes,
   },
   {
-    id: 4,
+    id: 6,
     name: "Tea",
     price: 5,
     description: "Informative",
@@ -85,7 +85,7 @@ export const foods = [
     category: dessert,
   },
   {
-    id: 5,
+    id: 7,
     name: "Tea",
     price: 5,
     description: "Informative",
@@ -93,7 +93,7 @@ export const foods = [
     category: coldDishes,
   },
   {
-    id: 4,
+    id: 8,
     name: "Tea",
     price: 5,
     description: "Informative",
@@ -101,7 +101,7 @@ export const foods = [
     category: dessert,
   },
   {
-    id: 5,
+    id: 9,
     name: "Tea",
     price: 5,
     description: "Informative",

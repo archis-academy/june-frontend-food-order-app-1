@@ -1,23 +1,27 @@
 @import "../../styles/abstracts/variables";
 
-.edit-dish-container {
-}
-
 .content-container {
   padding: 5%;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @media (max-width: 820px) {
+    gap: 15px;
+  }
   .content-box {
     .informations {
       font-family: $primary-font;
       color: $primary-font-color;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
-      line-height: 28px;
+      line-height: 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 820px) {
+        flex-direction: column;
+        gap: 8px;
+      }
 
       .information-inputs {
         height: 48px;
@@ -29,9 +33,16 @@
         font-size: 14px;
         line-height: 20px;
         // color: $tertiary-font-color;
+        color: #e0e6e9;
         max-width: 470px;
         width: 100%;
       }
+    }
+  }
+
+  .line-img-box {
+    .line-img {
+      width: 100%;
     }
   }
 }
@@ -41,6 +52,9 @@
   max-width: 420px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  bottom: 0;
+  margin-top: 22px;
   #cancel-btn {
     box-shadow: none;
   }
