@@ -27,7 +27,9 @@ function LoginPage() {
   function login() {
     if (user) {
       localStorage.setItem('currentuser', user.username);
-      navigate("/", { replace: true })
+      setTimeout(()=>{
+        navigate("/", { replace: true })
+      },3000)
     } else {
       setIsFalse(true)
     }

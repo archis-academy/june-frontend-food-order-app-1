@@ -21,6 +21,10 @@ function SignupPage() {
     });
   }
 
+  const isFormValid = () => {
+    return formData.email !== "" && formData.password !== "" && formData.username !== "";
+  };
+
   const userData = JSON.parse(localStorage.getItem('users')) || [];
 
   function signUp() {
@@ -49,7 +53,7 @@ function SignupPage() {
           <input onKeyUp={(e) => handleChange(e)} name="confirmPassword" type="password" placeholder="Confirm Your Password" />
           {isConfirmVisible ? <div className="signup-alert">{passwordAlert}</div> : <div></div>}
           <div className="signup-alert"><span>Do you have an account? / </span><Link to={"/login"} style={{fontWeight:"bold"}}> Login</Link></div>
-          <button onClick={() => signUp()}>Sign Up</button>
+          <button className={isFormValid() ? "button-enabled" : "button-disabled"}   disabled={!isFormValid()} onClick={() => signUp() }>Sign Up</button>
         </div>
       </main>
     </div>
