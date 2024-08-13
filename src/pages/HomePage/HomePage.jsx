@@ -9,22 +9,6 @@ import Cart from "../../components/Cart/Cart";
 import Payment from "../../components/Payment/Payment";
 
 function HomePage() {
-  const products = [
-    {
-      id: 1,
-      img: img1,
-      title: "Pasta 1",
-      price: 3,
-    },
-
-    {
-      id: 2,
-      img: img2,
-      title: "Pasta 2",
-      price: 5,
-    },
-  ]
-
   const [openCart, setCartOpen] = useState(false);
   const [openPayment,setPaymentOpen] = useState(false);
 
@@ -32,6 +16,8 @@ function HomePage() {
     JSON.parse(localStorage.getItem("cartProducts")) || []
   );
 
+
+  //Add Cart Functions Start
   useEffect(() => {
     const hasQuantityProperty = cartProducts.every(product => product.quantity !== undefined);
 
@@ -70,6 +56,7 @@ function HomePage() {
   useEffect(() => {
     localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
   }, [cartProducts]);
+  //Use this for adding products to cart
 
   return (
     <div>
@@ -80,16 +67,6 @@ function HomePage() {
           <Cart  openPayement={openPayment} setPaymentOpen={setPaymentOpen}  cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
           <Payment openPayement={openPayment} setPaymentOpen={setPaymentOpen}/>
         </div>
-        <div>
-          {products.map((product) => (
-            <div key={product.id}>
-              <img src={product.img} />
-              <p > {product.title}</p>
-              <p >{product.price}</p>
-              <button onClick={() => addToCart(product)}> Add To Cart </button>
-            </div>
-          ))}
-        </div>        
       </div>
     </div>
   );
