@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const CartFooter = ({cartContentProducts}) => {
+const CartFooter = ({openPayment,setPaymentOpen, cartContentProducts}) => {
     const [subtotal, setSubtotal] = useState(0);
   
     useEffect(() => {
@@ -11,7 +11,10 @@ const CartFooter = ({cartContentProducts}) => {
         setSubtotal(updatedSubtotal);
     }, [cartContentProducts])
 
-  
+    const paymentOpener = () => {
+        setPaymentOpen(true);
+ 
+    }
 
     return (
         <div className="cart-footer-container">
@@ -24,7 +27,7 @@ const CartFooter = ({cartContentProducts}) => {
                     <p className="cart-footer-p"> Subtotal</p>
                     <p className="cart-footer-money-p"> {subtotal} </p>
                 </div>
-                <button onClick={ () => openPayment} className="cart-footer-button"> Continue To Payment </button>
+                <button onClick={ () => paymentOpener()} className="cart-footer-button"> Continue To Payment </button>
             </div>
         </div>
     )

@@ -6,13 +6,7 @@ import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 
 Modal.setAppElement("#root");
 
-function Payment() {
-  // const [modalIsOpen, setIsOpen] = useState(false);
-
-  // function modalHandler() {
-  //   setIsOpen(!modalIsOpen);
-  // }
-
+function Payment( {openPayment, setPaymentOpen}) {
   const [selectedButton, setSelectedButton] = useState(null);
 
   const handleButtonClick = (buttonId) => {
@@ -46,6 +40,10 @@ function Payment() {
   };
 
   const dropdownItems = ["To Go", "Dine In", "Delivery"];
+
+  const closePayment = () => {
+    setPaymentOpen(false);
+  }
 
   return (
     <div className="payment-container">  
@@ -163,6 +161,7 @@ function Payment() {
 
         <div className="btn-box">
           <Button
+            onClick={() => closePayment()}
             width="175px"
             height="50px"
             variant="secondary"

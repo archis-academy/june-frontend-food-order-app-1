@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CartHeader({openCart , setCartOpen}) {
+function CartHeader({setPaymentOpen,openCart , setCartOpen}) {
 
   const [selectedButton, setSelectedButton] = useState("cartButton1");
 
@@ -9,7 +9,8 @@ function CartHeader({openCart , setCartOpen}) {
   };
 
   const closeCart = () => {
-    setCartOpen(false)
+    setCartOpen(false);
+    setPaymentOpen(false);
   };
 
   return (

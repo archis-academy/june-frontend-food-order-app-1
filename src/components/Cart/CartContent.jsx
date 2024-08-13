@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CartFooter from "./CartFooter";
 
-const CartContent = ({ cartProducts, setCartProducts }) => {
+const CartContent = ({openPayement,setPaymentOpen, cartProducts, setCartProducts }) => {
     const [cartContentProducts, setCartContentProducts] = useState(cartProducts);
  
     useEffect(() => {
@@ -58,7 +58,7 @@ const CartContent = ({ cartProducts, setCartProducts }) => {
                     ))
                 }
             </div>
-            <CartFooter cartContentProducts={cartContentProducts}/>
+            <CartFooter openPayement={openPayement} setPaymentOpen={setPaymentOpen} cartContentProducts={cartContentProducts}/>
         </>
 
     )

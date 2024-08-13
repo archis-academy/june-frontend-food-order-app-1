@@ -6,10 +6,28 @@
 }
 
 .cart-payment-container{
-  position: fixed;
+  position: absolute;
   display: flex;
   height: 100vh;
   top: 0;
   right: 0;
   z-index: 10;
+  transform: translateX(50%);
+  transition: all 1.5s ease-in-out;
 }
+.cart-payment-close{
+  top: 0;
+  right: 0;
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: all 1.5s ease-in-out;
+}
+
+.payment-open{
+  transform: translateX(0);
+  transition: all 1.5s ease-in-out;
+}
+

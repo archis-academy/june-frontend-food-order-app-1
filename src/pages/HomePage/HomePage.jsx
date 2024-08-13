@@ -26,6 +26,7 @@ function HomePage() {
   ]
 
   const [openCart, setCartOpen] = useState(false);
+  const [openPayment,setPaymentOpen] = useState(false);
 
   const [cartProducts, setCartProducts] = useState(
     JSON.parse(localStorage.getItem("cartProducts")) || []
@@ -75,11 +76,10 @@ function HomePage() {
       <Sidebar />
       <div className="mainRoot">
         <Header openCart={openCart}  setCartOpen={setCartOpen} />
-        <div className="cart-payment-container">
-         <Cart cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
-          <Payment />
+        <div  className={`${openCart ? "cart-payment-container" : "cart-payment-close"} ${openPayment ? "payment-open" : "payment-close"}`}>
+          <Cart  openPayement={openPayment} setPaymentOpen={setPaymentOpen}  cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
+          <Payment openPayement={openPayment} setPaymentOpen={setPaymentOpen}/>
         </div>
-
         <div>
           {products.map((product) => (
             <div key={product.id}>
