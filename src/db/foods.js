@@ -31,7 +31,7 @@ export const categories = [
     id: 6,
     name: "Soup",
     key: "soup",
-  },
+  },    
   {
     id: 7,
     name: "Sushi",
@@ -47,7 +47,7 @@ export const foods = [
     price: 10,
     description: "Tasty",
     image: "/src/assets/Foods/beef.svg",
-    category: grill,
+    category: coldDishes,
   },
   {
     id: 2,
