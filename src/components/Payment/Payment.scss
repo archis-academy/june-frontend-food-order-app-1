@@ -1,25 +1,40 @@
 @import "../../styles/abstracts/index";
-.payment-modal {
-  position: fixed;
-  top: 0;
-  left: 72%;
-  right: 0;
-  bottom: 0;
+// .payment-modal {
+//   position: fixed;
+//   top: 0;
+//   left: 72%;
+//   right: 0;
+//   bottom: 0;
+//   background-color: $secondary-bg;
+//   border: 1px solid $secondary-bg;
+//   padding: 10px 20px;
+//   padding-top: 24px;
+//   overflow-y: auto;
+// }
+// .payment-modal-overlay {
+//   // position: fixed;
+//   // top: 0;
+//   // left: 0;
+//   // right: 0;
+//   // bottom: 0;
+//   background-color: #000000b2;
+// }
+.payment-container{
   background-color: $secondary-bg;
-  border: 1px solid $secondary-bg;
-  padding: 10px 20px;
-  padding-top: 24px;
+  padding: 20px;
+  width: 410px;
+  position: relative;
   overflow-y: auto;
+  transform: translateX(0);
+  transition: all 1.5s ease-in-out;
 }
-.payment-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000b2;
+
+.close-payment {
+  transform: translateX(0);
+  transition: all 1.5s ease-in-out;
 }
-.header {
+
+.payment-header {
   .header-title {
     font-family: $primary-font;
     font-size: 28px;
@@ -197,8 +212,14 @@
 .btn-box {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  flex: 1; 
   margin-top: 16px;
+  position: absolute;
+  bottom: 0;
+  max-width: 370px;
+  width: 100%;
+  padding-bottom: 15px;
+
   #cancel-btn {
     box-shadow: none;
   }

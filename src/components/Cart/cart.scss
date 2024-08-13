@@ -1,20 +1,20 @@
 @import "../../styles/abstracts/variables";
 $primary-cart-font-family: "Barlow", sans-serif;
 
-.cart-close {
-  display: none;
+.cart-close{
+  transform: translateX(100%);
+  transition: all 1.5s ease-in-out;
 }
 
 .cart-all-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  max-width: 410px;
-  width: 100%;
+  position: relative;
   background-color: $secondary-bg;
   padding: 10px 40px;
+  transform: translateX(0);
+  transition: all 1.5s ease-in-out;
 
+  // max-width: 410px;
+  width: 410px;
   @media screen and (max-width: 430px) {
     padding: 10px;
   }
@@ -172,6 +172,7 @@ $primary-cart-font-family: "Barlow", sans-serif;
   .cart-footer-container {
     margin-top: 20px;
 
+
     .cart-footer-money-container {
       display: flex;
       margin-top: 10px;
@@ -192,6 +193,13 @@ $primary-cart-font-family: "Barlow", sans-serif;
         line-height: 22px;
         color: white;
       }
+    }
+
+    .cart-footer-info-container{
+      position: absolute;
+      bottom: 0;
+      width: 85%;
+      padding-bottom: 15px;
     }
 
     .cart-footer-button {
