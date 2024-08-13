@@ -1,0 +1,40 @@
+.analytics {
+  display: flex;
+  gap: 20px;
+}
+
+.analytics-card {
+  background-color: #252945;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  width: 300px;
+  text-align: center;
+}
+
+.analytics-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.analytics-info h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.analytics-info p {
+  font-size: 18px;
+  color: #a1a1b9;
+}
+
+.change {
+  font-size: 16px;
+}
+
+.change.up {
+  color: #00c853;
+}
+
+.change.down {
+  color: #ff5252;
+}
