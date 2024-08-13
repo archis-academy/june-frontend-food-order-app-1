@@ -1,0 +1,207 @@
+@import "../../styles/abstracts/variables";
+$primary-cart-font-family: "Barlow", sans-serif;
+
+.cart-close {
+  display: none;
+}
+
+.cart-all-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  max-width: 410px;
+  width: 100%;
+  background-color: $secondary-bg;
+  padding: 10px 40px;
+
+  @media screen and (max-width: 430px) {
+    padding: 10px;
+  }
+  @media screen and (max-width: 350px) {
+    padding: 2px;
+  }
+  
+  
+  .cart-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 360px;
+    border-bottom: 1px solid $primary-bg;
+
+
+    .cart-header-title-closer-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+  }
+
+  .cart-header-title {
+    color: $primary-font-color;
+    font-family: $primary-cart-font-family;
+  }
+
+  .cart-header-buttons-container {
+    display: flex;
+    gap: 8px;
+
+
+    .cart-header-selected-button {
+      background-color: rgb(234, 124, 105, 1);
+      color: $primary-font-color;
+      padding: 7px 12px;
+      border-radius: 8px;
+      border: 1px solid $primary-bg;
+    }
+
+    .cart-header-button {
+      color: $accent-color;
+      padding: 7px 12px;
+      border-radius: 8px;
+      border: 1px solid $primary-bg;
+      background-color: $secondary-bg;
+    }
+  }
+
+
+  .cart-header-titles-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .cart-header-p {
+      color: $primary-font-color;
+      font-family: $primary-cart-font-family;
+      font-size: 16px;
+    }
+
+    .cart-left-titles-container {
+      display: flex;
+      gap: 33px;
+
+    }
+  }
+
+  .cart-products-container {
+    height: 380px;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      display: none;
+    }
+  }
+
+  .cart-products-container::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 0px;
+    display: none;
+  }
+  
+  .cart-product-mapped-data-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+
+    .cart-product-img-p-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: white;
+
+      .cart-product-img {
+        object-fit: contain;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
+
+    .cart-product-qty-total-container {
+      display: flex;
+      gap: 21px;
+      align-items: center;
+      color: white;
+      margin-right: 15px;
+
+      .cart-product-qty {
+        padding: 14px 12px;
+        width: 48px;
+        background-color: #2d303E;
+        border: 1px solid $primary-bg;
+        border-radius: 8px;
+        color: white;
+        text-align: center;
+      }
+
+      .cart-product-qty::placeholder {
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+
+  .cart-product-note-container {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding-top: 10px;
+    color: white;
+    gap: 5px;
+
+    .cart-product-note-container {
+      max-width: 280px;
+      border-radius: 8px;
+      background-color: $primary-bg;
+      padding: 3px;
+      border: 2px solid $secondary-bg;
+    }
+
+    .cart-products-delete-svg-container {
+      border: 1px solid $accent-color;
+      border-radius: 8px;
+      padding: 7px 8px;
+    }
+  }
+
+  .cart-footer-container {
+    margin-top: 20px;
+
+    .cart-footer-money-container {
+      display: flex;
+      margin-top: 10px;
+      justify-content: space-between;
+
+      .cart-footer-p {
+        font-family: $primary-cart-font-family;
+        font-size: 14px;
+        color: #ABBBC2;
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      .cart-footer-money-p {
+        font-family: $primary-cart-font-family;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: white;
+      }
+    }
+
+    .cart-footer-button {
+      background-color: $accent-color;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+
+  }
+}
