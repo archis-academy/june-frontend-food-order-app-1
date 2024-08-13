@@ -15,8 +15,9 @@ function DashBoard() {
       </div>
       <div className="right-side">
         <AmodTree />
+
+        <MTOChartSection />
       </div>
-      <MTOChartSection />
     </div>
   );
 }

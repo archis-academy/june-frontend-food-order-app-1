@@ -2,18 +2,17 @@ body {
   background-color: rgba(37, 40, 54, 1);
 }
 .dashboard {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 .right-side {
   width: 375px;
   height: 790px;
-  position: absolute;
   top: 24px;
   right: 15px;
+  margin: 10px 0px;
 }
 .left-side {
-  width: 646px;
-  height: 776px;
   top: 24px;
   margin-left: 130px;
   gap: 24px;
@@ -26,4 +25,15 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   height: 26vh;
+}
+
+@media (max-width: 1155px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .right-side {
+    display: flex;
+    margin-left: 130px;
+    justify-content: space-between;
+  }
 }
