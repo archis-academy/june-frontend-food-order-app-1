@@ -44,7 +44,7 @@
 				.background-overlay {
 					position: absolute;
 					width: 192px;
-					height: 226px;
+					height: 229px;
 					background-color: rgba(31, 29, 43, 0.7);
 					z-index: 1;
 					border-radius: 5%;
@@ -64,7 +64,8 @@
 
 				h3,
 				p {
-          margin-top: 3px;
+          font-size: 17px;
+					margin-top: 3px;
 					position: relative;
 					z-index: 2;
 				}
@@ -97,9 +98,8 @@
 					margin: 0;
 					margin-top: 10px;
 					display: flex;
-          color: rgb(100, 100, 100);
+					color: rgb(100, 100, 100);
 				}
-       
 			}
 		}
 	}
