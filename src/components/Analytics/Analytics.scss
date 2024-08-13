@@ -4,37 +4,77 @@
 }
 
 .analytics-card {
-  background-color: #252945;
+  background-color: #1f1d2b;
   border-radius: 10px;
   padding: 20px;
   color: #fff;
   width: 300px;
-  text-align: center;
+
+  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 .analytics-icon img {
   width: 50px;
   height: 50px;
+  margin-right: 10px;
 }
 
 .analytics-info h2 {
   font-size: 24px;
   margin: 10px 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
 }
 
 .analytics-info p {
   font-size: 18px;
-  color: #a1a1b9;
+  color: #abbbc2;
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.change-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .change {
+  margin-right: 8px;
   font-size: 16px;
+  color: inherit;
+}
+
+.change-icon {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 14px;
+  color: inherit;
+}
+
+.change-icon.up {
+  background-color: #88e0913d;
+}
+
+.change-icon.down {
+  background-color: #ff64713d;
 }
 
 .change.up {
-  color: #00c853;
+  color: #50d1aa;
 }
 
 .change.down {
-  color: #ff5252;
+  color: #ff7ca3;
 }
