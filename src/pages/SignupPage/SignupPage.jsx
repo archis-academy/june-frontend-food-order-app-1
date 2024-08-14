@@ -22,7 +22,7 @@ function SignupPage() {
   }
 
   const isFormValid = () => {
-    return formData.email !== "" && formData.password !== "" && formData.username !== "";
+    return formData.email !== "" && formData.password !== "" && formData.username !== "" && formData.confirmPassword !== "";
   };
 
   const userData = JSON.parse(localStorage.getItem('users')) || [];
