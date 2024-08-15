@@ -48,7 +48,7 @@ export const foods = [
     id: 2,
     name: "Pizza",
     price: 15,
-    description: "Cheesyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+    description: "Cheesy",
     image: "https://cdn.auth0.com/blog/whatabyte/pizza-sm.png",
     category: grill,
   },
