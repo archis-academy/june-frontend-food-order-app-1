@@ -5,7 +5,9 @@ function ProductCard({ id, image, name, price, editHandler, takeDish }) {
   return (
     <>
       <div className="product-card">
-        <img className="food-image" src={image} style={{ width: "100%" }} />
+        <div className="img-box">
+          <img className="food-image" src={image} />
+        </div>
         <div className="details">
           <p>{name}</p>
           <span>${price}</span>
