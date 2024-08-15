@@ -1,7 +1,6 @@
 /* Most Type of Dınner Start */
 .mto-tree {
-  width: 372px;
-  height: 333px;
+  max-width: 100%;
   padding: 24px 0px 40px 0px;
   gap: 32px;
   border-radius: 8px 0px 0px 0px;
@@ -15,8 +14,7 @@
     justify-content: center;
 
     .mto-head-text {
-      width: 165px;
-      height: 28px;
+      max-width: 100%;
       font-family: "Barlow", sans-serif;
       font-size: 20px;
       font-weight: 600;
@@ -26,8 +24,7 @@
     }
 
     .mto-fitler {
-      width: 95px;
-      height: 45px;
+      max-width: 100%;
       margin-left: 64px;
       background-color: rgba(31, 29, 43, 1);
       color: white;
@@ -36,8 +33,7 @@
   }
 
   .divider {
-    width: 370px;
-    margin-top: 16px;
+    max-width: 100%;
     border: 1px 0px 0px 0px;
     opacity: 0px;
     border: 1px solid rgba(57, 60, 73, 1);
@@ -45,12 +41,11 @@
 
   .mto-chart {
     display: flex;
-    width: 370px;
+    max-width: 100%;
     margin-top: 32px;
 
     .mto-chart-info {
-      width: 105px;
-      height: 143px;
+      max-width: 100%;
       gap: 16px;
 
       .mto-chart-info-text {
