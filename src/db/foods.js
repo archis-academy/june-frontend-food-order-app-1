@@ -81,6 +81,7 @@ export const foods = [
     image: "/src/assets/Foods/mushroom.svg",
     category: coldDishes,
   },
+
   {
     id: 6,
     name: "Spicy instant noodle with special omelette",
