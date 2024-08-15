@@ -8,10 +8,10 @@
   padding: 20px;
 }
 .details {
-  max-width: 150px;
   margin: 0 auto;
   font-size: 14px;
   p {
+    word-wrap: break-word;
     margin-bottom: 10px;
     font-weight: 500;
   }
