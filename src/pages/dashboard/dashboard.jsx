@@ -2,15 +2,20 @@ import MTOChartSection from "../../components/MostTypeOfDinner/MostTypeOfDinner"
 import AmodTree from "../../components/AnalyticsMostOrderedDishes/Amod";
 import Sidebar from "@/components/Sidebar/Sidebar";
 
+import OrderReport from "../../components/OrderReport/OrderReport";
+import "./dashboard.scss";
+
 function DashBoard() {
   return (
     <div className="dashboard">
-      <Sidebar/>
+      <Sidebar />
       <div className="left-side">
-        left side
+        <div className="order-col"></div>
+        <OrderReport />
       </div>
       <div className="right-side">
-      <AmodTree />
+        <AmodTree />
+
         <MTOChartSection />
       </div>
     </div>
