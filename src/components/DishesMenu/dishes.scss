@@ -1,0 +1,106 @@
+.menu {
+	.title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		width: 632px;
+		height: 48px;
+
+		h2 {
+			margin: 0;
+		}
+
+		.menu-filter,
+		.service-type {
+			margin-left: 10px;
+			padding: 5px;
+			background-color: rgba(31, 29, 43, 1);
+			border: none;
+			color: white;
+		}
+	}
+
+	.dishes-container {
+		display: flex;
+		flex-wrap: wrap;
+
+		width: 100%;
+		gap: 26px;
+		margin: 0;
+
+		.row {
+			display: flex;
+			margin-bottom: 20px;
+			width: 192px;
+			height: 260px;
+
+			.dish {
+				position: relative;
+				margin-right: 10px;
+				text-align: center;
+				cursor: pointer;
+
+				.background-overlay {
+					position: absolute;
+					width: 192px;
+					height: 229px;
+					background-color: rgba(31, 29, 43, 0.7);
+					z-index: 1;
+					border-radius: 5%;
+					margin-top: 50px;
+				}
+
+				img {
+					align-items: center;
+					margin: 30px 30px 0px;
+					position: relative;
+					z-index: 2;
+					background: none;
+					width: 132px;
+					height: 132px;
+					border-radius: 50%;
+				}
+
+				h3,
+				p {
+          font-size: 17px;
+					margin-top: 3px;
+					position: relative;
+					z-index: 2;
+				}
+
+				.add-to-cart {
+					position: absolute;
+					top: 30%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background-color: rgba(0, 0, 0, 0.7);
+					color: white;
+					padding: 10px 20px;
+					border-radius: 20px;
+					opacity: 0;
+					transition: opacity 0.3s ease, box-shadow 0.3s ease;
+					z-index: 3;
+					width: 100px;
+				}
+
+				&:hover .add-to-cart {
+					opacity: 1;
+					box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+						0 0 30px rgba(255, 255, 255, 0.4), 0 0 45px rgba(255, 255, 255, 0.2);
+				}
+				.price-box {
+					align-items: center;
+					justify-content: center;
+					display: inline-flex;
+					gap: 2px;
+					margin: 0;
+					margin-top: 10px;
+					display: flex;
+					color: rgb(100, 100, 100);
+				}
+			}
+		}
+	}
+}
