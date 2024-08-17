@@ -80,7 +80,9 @@ function ProductsManagement() {
             );
           })}
         </div>
-        <ChangeButtons />
+        <div className="footer-sticky">
+          <ChangeButtons />
+        </div>
       </div>
       <Modal isOpen={editModalIsOpen} style={customStyles}>
         <EditDishModal
