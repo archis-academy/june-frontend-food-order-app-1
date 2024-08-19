@@ -14,9 +14,7 @@ const Menu = () => {
 			? currentFoods
 			: currentFoods.filter((food) => food.category.key === filter);
 
-	const handleAddToCart = (food) => {
-		console.log(`${food.name} added to cart`);
-	};
+
 
 	const handleServiceTypeChange = (type) => {
 		setServiceType(type);
@@ -53,14 +51,15 @@ const Menu = () => {
 			</div>
 			<div className="dishes-container">
 				{filteredFoods.map((food, rowIndex) => (
-					<div className="row" key={rowIndex}>
-						<div
-							className="dish"
-							key={food}
-							onClick={() => handleAddToCart(food)}
-						>
-							<div className="background-overlay"></div>
-							<img src={food.image} alt={food.name} />
+
+					<div
+						key={rowIndex}
+						className="dish"
+						onClick={() => handleAddToCart(food)}
+					>
+						<img src={food.image} alt={food.name} />
+						<div className="overlay-div"></div>
+						<div className="dishes-text-container">
 							<h3>{food.name}</h3>
 							<p>{food.description}</p>
 							<div className="price-box">
@@ -69,9 +68,10 @@ const Menu = () => {
 									<p> $ {food.price}</p>
 								</span>
 							</div>
-							<div className="add-to-cart">Add to Cart</div> {/* Add this */}
 						</div>
+						<div className="add-to-cart">Add to Cart</div> {/* Add this */}
 					</div>
+
 				))}
 			</div>
 		</div>
