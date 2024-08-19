@@ -3,11 +3,40 @@ import React, { useState, useEffect } from "react";
 import "./dishes.scss";
 import { foods, categories } from "../../db/foods";
 
-const Menu = () => {
+const Menu = ({cartProducts, setCartProducts}) => {
 	const [filter, setFilter] = useState("all");
 	const [serviceType, setServiceType] = useState("dine in");
 	const [currentFoods, setCurrentFoods] = useState(foods);
 	const [timer, setTimer] = useState(Date.now());
+
+	//Add Cart Functions Start
+	
+	const addToCart = (product) => {
+		const isInCart = cartProducts.some((cartProduct) => {
+			return parseInt(product.id) === parseInt(cartProduct.id)
+		});
+
+		if (isInCart) {
+			const sameProduct = cartProducts.find((cartProduct) => {
+				return parseInt(product.id) === parseInt(cartProduct.id)
+			});
+
+			sameProduct.quantity = sameProduct.quantity + 1;
+			setCartProducts((prevProducts) =>
+				prevProducts.map((prevProduct) =>
+					prevProduct.id === product.id ? { ...prevProduct, quantity: sameProduct.quantity } : prevProduct
+				)
+			);
+		}
+		else {
+			setCartProducts((prev) => [...prev, product]);
+		}
+	}
+
+	useEffect(() => {
+		localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+	}, [cartProducts]);
+	//Use this for adding products to cart
 
 	const filteredFoods =
 		filter === "all"
@@ -55,7 +84,6 @@ const Menu = () => {
 					<div
 						key={rowIndex}
 						className="dish"
-						onClick={() => handleAddToCart(food)}
 					>
 						<img src={food.image} alt={food.name} />
 						<div className="overlay-div"></div>
@@ -69,7 +97,7 @@ const Menu = () => {
 								</span>
 							</div>
 						</div>
-						<div className="add-to-cart">Add to Cart</div> {/* Add this */}
+						<div onClick={() => addToCart(food)} className="add-to-cart">Add to Cart</div> {/* Add this */}
 					</div>
 
 				))}

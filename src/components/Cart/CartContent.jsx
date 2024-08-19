@@ -5,7 +5,8 @@ const CartContent = ({openPayement,setPaymentOpen, cartProducts, setCartProducts
     const [cartContentProducts, setCartContentProducts] = useState(cartProducts);
  
     useEffect(() => {
-        setCartContentProducts(cartProducts)
+        setCartContentProducts(cartProducts);
+        console.log(cartProducts)
     }, [cartProducts]);
 
     const quantityHandler = (product, event) => {
@@ -33,9 +34,9 @@ const CartContent = ({openPayement,setPaymentOpen, cartProducts, setCartProducts
                         <div key={product.id} className="cart-product-features-container">
                             <div className="cart-product-mapped-data-container">
                                 <div className="cart-product-img-p-container">
-                                    <img className="cart-product-img" src={product.img} alt="" />
+                                    <img className="cart-product-img" src={product.image} alt="" />
                                     <div className="cart-product-title-price-container">
-                                        <p>{product.title}</p>
+                                        <p>{product.name}</p>
                                         <p>${product.price}</p>
                                     </div>
                                 </div>

@@ -15,6 +15,14 @@ function Header({ openCart, setCartOpen }) {
     setCartOpen(true)
   };
 
+  
+  if (openCart) {
+    document.body.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+  }
+
+
   return (
     <header className="header">
       <div className="header-container">

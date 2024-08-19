@@ -12,9 +12,7 @@ const Cart = ({openPayement,setPaymentOpen, openCart, setCartOpen, cartProducts,
 
   return (
     <>
-      {/* <div className={openCart ? "cart-all-container" : "cart-close"}> */}
       <div className="cart-all-container">
-
         <div className="cart-container">
           <CartHeader setPaymentOpen={setPaymentOpen} openCart={openCart} setCartOpen={setCartOpen}/>
           <CartContent openPayement={openPayement} setPaymentOpen={setPaymentOpen} cartProducts={cartProducts} setCartProducts={setCartProducts} />

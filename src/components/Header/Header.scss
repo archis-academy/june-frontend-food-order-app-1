@@ -1,5 +1,10 @@
 @import "../../styles/abstracts/variables";
 
+
+.no-scroll {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

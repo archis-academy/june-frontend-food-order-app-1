@@ -12,14 +12,12 @@ import Menu from "../../components/DishesMenu/dishes";
 
 function HomePage() {
   const [openCart, setCartOpen] = useState(false);
-  const [openPayment,setPaymentOpen] = useState(false);
+  const [openPayment, setPaymentOpen] = useState(false);
 
   const [cartProducts, setCartProducts] = useState(
     JSON.parse(localStorage.getItem("cartProducts")) || []
   );
 
-
-  //Add Cart Functions Start
   useEffect(() => {
     const hasQuantityProperty = cartProducts.every(product => product.quantity !== undefined);
 
@@ -30,46 +28,20 @@ function HomePage() {
       }));
       setCartProducts(updatedCartProducts);
     }
+    console.log(cartProducts)
   }, [cartProducts]);
 
-
-  const addToCart = (product) => {
-    const isInCart = cartProducts.some((cartProduct) => {
-      return parseInt(product.id) === parseInt(cartProduct.id)
-    });
-
-    if (isInCart) {
-      const sameProduct = cartProducts.find((cartProduct) => {
-        return parseInt(product.id) === parseInt(cartProduct.id)
-      });
-
-      sameProduct.quantity = sameProduct.quantity + 1;
-      setCartProducts((prevProducts) =>
-        prevProducts.map((prevProduct) =>
-          prevProduct.id === product.id ? { ...prevProduct, quantity: sameProduct.quantity } : prevProduct
-        )
-      );
-    }
-    else {
-      setCartProducts((prev) => [...prev, product]);
-    }
-  }
-
-  useEffect(() => {
-    localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
-  }, [cartProducts]);
-  //Use this for adding products to cart
 
   return (
     <div>
       <Sidebar />
       <div className="mainRoot">
-        <Header openCart={openCart}  setCartOpen={setCartOpen} />
-        <div  className={`${openCart ? "cart-payment-container" : "cart-payment-close"} ${openPayment ? "payment-open" : "payment-close"}`}>
-          <Cart  openPayement={openPayment} setPaymentOpen={setPaymentOpen}  cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
-          <Payment openPayement={openPayment} setPaymentOpen={setPaymentOpen}/>
+        <Header openCart={openCart} setCartOpen={setCartOpen} />
+        <div className={`${openCart ? "cart-payment-container" : "cart-payment-close"} ${openPayment ? "payment-open" : "payment-close"}`}>
+          <Cart openPayement={openPayment} setPaymentOpen={setPaymentOpen} cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
+          <Payment openPayement={openPayment} setPaymentOpen={setPaymentOpen} />
         </div>
-       <Menu />
+        <Menu cartProducts={cartProducts} setCartProducts={setCartProducts} />
       </div>
     </div>
   );
