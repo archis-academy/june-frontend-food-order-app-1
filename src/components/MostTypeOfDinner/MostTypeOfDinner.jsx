@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 // import ReactApexChart from "./react-apexcharts";
 import "./mto.scss";
+import '../../pages/dashboard/dashboard.scss'
 
 const ApexChartComponent = ({ series }) => {
   const options = {

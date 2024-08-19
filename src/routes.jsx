@@ -1,4 +1,4 @@
-// import App from "./App.jsx";
+/* eslint-disable no-dupe-keys */
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import SignupPage from "./pages/SignupPage/SignupPage.jsx";
 import LoginPage from "./pages/LoginPage/LoginPage.jsx";
@@ -13,6 +13,7 @@ const routes = [
     element: (
          <HomePage />
     ),
+    element: <HomePage />,
   },
   
   {
@@ -21,6 +22,7 @@ const routes = [
       <DashBoard />
     ),
   },
+
   {
     path: "/settings",
     element: (

@@ -1,0 +1,44 @@
+body {
+  background-color: rgba(37, 40, 54, 1);
+}
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+.right-side {
+  width: 375px;
+  height: 790px;
+  gap: 20px;
+  margin: 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.left-side {
+  margin-left: 130px;
+  gap: 24px;
+
+  color: white;
+}
+.order-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 26vh;
+}
+
+@media (max-width: 1155px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .right-side {
+    display: flex;
+    margin-left: 130px;
+    justify-content: space-between;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 632px) {
+  .order-reports {
+  }
+}

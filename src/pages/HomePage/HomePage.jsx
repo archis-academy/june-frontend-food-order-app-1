@@ -7,6 +7,8 @@ import img2 from "/pasta2.png"
 import Cart from "../../components/Cart/Cart";
 
 import Payment from "../../components/Payment/Payment";
+import Menu from "../../components/DishesMenu/dishes";
+
 
 function HomePage() {
   const [openCart, setCartOpen] = useState(false);
@@ -67,6 +69,7 @@ function HomePage() {
           <Cart  openPayement={openPayment} setPaymentOpen={setPaymentOpen}  cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />
           <Payment openPayement={openPayment} setPaymentOpen={setPaymentOpen}/>
         </div>
+       <Menu />
       </div>
     </div>
   );
