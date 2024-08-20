@@ -31,7 +31,7 @@ export const categories = [
     id: 6,
     name: "Soup",
     key: "soup",
-  },    
+  },
   {
     id: 7,
     name: "Sushi",
@@ -39,7 +39,7 @@ export const categories = [
   },
 ];
 
-const [coldDishes, grill, appetizer, dessert, soup,sushi] = categories;
+const [coldDishes, grill, appetizer, dessert, soup, sushi] = categories;
 export const foods = [
   {
     id: 1,
@@ -81,7 +81,6 @@ export const foods = [
     image: "/src/assets/Foods/mushroom.svg",
     category: coldDishes,
   },
-
   {
     id: 6,
     name: "Spicy instant noodle with special omelette",
