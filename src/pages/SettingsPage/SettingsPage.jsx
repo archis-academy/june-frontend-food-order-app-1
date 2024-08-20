@@ -8,23 +8,28 @@ import YourRestaurant from "../../components/YourRestaurant/YourRestaurant";
 import Notifications from "../../components/Notifications/Notifications";
 import SecurityPage from "../../components/SecurityPage/SecurityPage";
 import AboutUs from "../../components/AboutUs/AboutUs";
+import { useState } from "react";
 
 function SettingsPage() {
   const { tabName } = useParams();
 
+  const [isAddDishOpen, setAddDishOpen] = useState(false);
+
+
+
   const settingComponents = {
     "appearance": <Appearance />,
     "your-restaurant": <YourRestaurant />,
-    "product-management": <ProductsManagement />,
+    "product-management": <ProductsManagement isAddDishOpen={isAddDishOpen} setAddDishOpen={setAddDishOpen} />,
     "notifications": <Notifications />,
     "security": <SecurityPage />,
     "about-us": <AboutUs />,
   };
 
-
-
+  
   return (
     <>
+      <div className={isAddDishOpen ? "overlay-div" : "close-overlay"}></div>
       <Sidebar />
       <main className="settings-page">
         <h1 className="settings-title">Settings</h1>
