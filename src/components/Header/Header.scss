@@ -1,5 +1,10 @@
 @import "../../styles/abstracts/variables";
 
+
+.no-scroll {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -8,16 +13,26 @@
   background-color: $primary-bg;
   color: $primary-font-color;
   width: 100%;
-  max-width: 1200px;
 
   @media screen and (max-width: 342px) {
     padding: 10px 0 0 0;
   }
 
+
+  .cart-opener-svg-close {
+    display: none;
+  }
+
+  .header-svg{
+    cursor: pointer;
+  }
+
+
   .header-container {
     display: flex;
     justify-content: space-between;
-    width: 928px;
+    gap: 20px;
+    width: 100%;
 
     @media screen and (max-width: 544px) {
       flex-direction: column;
@@ -50,6 +65,7 @@
       display: flex;
       align-items: center;
       position: relative;
+      gap: 10px;
 
       .search-input {
         width: 246px;
