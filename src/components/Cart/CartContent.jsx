@@ -6,7 +6,6 @@ const CartContent = ({openPayement,setPaymentOpen, cartProducts, setCartProducts
  
     useEffect(() => {
         setCartContentProducts(cartProducts);
-        console.log(cartProducts)
     }, [cartProducts]);
 
     const quantityHandler = (product, event) => {

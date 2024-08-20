@@ -28,7 +28,6 @@ function HomePage() {
       }));
       setCartProducts(updatedCartProducts);
     }
-    console.log(cartProducts)
   }, [cartProducts]);
 
 

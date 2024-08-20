@@ -47,7 +47,7 @@ function Payment( {openPayment, setPaymentOpen}) {
 
   return (
     <div className="payment-container">  
-        <div className="header">
+        <div className="payment-header">
           <h1 className="header-title">Payment</h1>
           <p className="header-text">3 payment method available</p>
         </div>

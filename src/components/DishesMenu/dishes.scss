@@ -29,10 +29,10 @@
 		width: 100%;
 		gap: 60px 30px;
 		padding: 50px;
-		transition: 0.5s ease-in-out all;
+		transition: 0.3s ease-in-out all;
 
 		.dish {
-			transition: 0.5s ease-in-out all;
+			transition: 0.3s ease-in-out all;
 			text-align: center;
 			gap: 10px;
 
@@ -89,12 +89,12 @@
 
             &:hover {
 				height: 270px;
-				transition: 0.6s ease-in-out all;
+				transition: 0.4s ease-in-out all;
 			}
 
 			&:hover .add-to-cart {
              opacity: 1;
-			 transition: 0.8s ease-in-out;
+			 transition: 0.6s ease-in-out;
 			}
 
 			.price-box {
