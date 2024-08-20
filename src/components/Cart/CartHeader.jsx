@@ -17,7 +17,7 @@ function CartHeader({setPaymentOpen,openCart , setCartOpen}) {
     <div className="cart-header-container">
       <div className="cart-header-title-closer-container">
         <h2 className="cart-header-title">Orders</h2>
-        <svg version="1.1" onClick={() => closeCart()} width="35px" height="35px" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enableBackground="new 0 0 32 32" xmlSpace="preserve">
+        <svg version="1.1"  className="cart-closer" onClick={() => closeCart()} width="35px" height="35px" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enableBackground="new 0 0 32 32" xmlSpace="preserve">
           <circle fill="none" stroke="#393C49" strokeWidth="2" strokeMiterlimit="10" cx="16" cy="16" r="12" />
           <line fill="none" stroke="#393C49" strokeWidth="2" strokeMiterlimit="10" x1="11.5" y1="11.5" x2="20.5" y2="20.5" />
           <line fill="none" stroke="#393C49" strokeWidth="2" strokeMiterlimit="10" x1="20.5" y1="11.5" x2="11.5" y2="20.5" />
