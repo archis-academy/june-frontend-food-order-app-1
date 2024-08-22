@@ -1,6 +1,5 @@
 @import "../../styles/abstracts/index";
 
-
 .add-dish-content-container{
     background-color: $secondary-bg;
     border-radius: 15px;
@@ -29,6 +28,10 @@
             border-radius: 8px;
             padding: 8px;
             border: none;
+            color: white;
+            font-family: $primary-font;
+            font-size: 17px;
+            font-weight: 500;
         }
 
         .add-dish-p{
@@ -49,6 +52,7 @@
             border-radius: 10px;
             color: #EA7C69;
             background-color: $secondary-bg;
+            cursor: pointer;
         }
 
         .add-button {
@@ -57,7 +61,7 @@
             border-radius: 10px;
             background-color: #EA7C69;
             box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.4);
-
+            cursor: pointer;
         }
     }
 }

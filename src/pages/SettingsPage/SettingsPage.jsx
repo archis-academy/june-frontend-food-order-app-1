@@ -15,8 +15,6 @@ function SettingsPage() {
 
   const [isAddDishOpen, setAddDishOpen] = useState(false);
 
-
-
   const settingComponents = {
     "appearance": <Appearance />,
     "your-restaurant": <YourRestaurant />,
@@ -29,7 +27,7 @@ function SettingsPage() {
   
   return (
     <>
-      <div className={isAddDishOpen ? "overlay-div" : "close-overlay"}></div>
+      <div className={isAddDishOpen ? "settings-overlay-div" : "close-overlay"}></div>
       <Sidebar />
       <main className="settings-page">
         <h1 className="settings-title">Settings</h1>
