@@ -3,7 +3,7 @@ import SettingsHeader from "../SettingsHeader/SettingsHeader";
 import { foods } from "../../db/foods";
 import "../ProductManagment/ProductManagment.scss";
 import CategoryTabs from "../CategoryTabs/CategoryTabs";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import ChangeButtons from "../ChangeButtons/ChangeButtons";
 import EditDishModal from "../EditDishModal/EditDishModal";
@@ -40,6 +40,11 @@ function ProductsManagement({ isAddDishOpen, setAddDishOpen }) {
   });
   const [editableDish, setEditableDish] = useState([]);
 
+
+  useEffect(() => {
+    setFilteredDishes(filteredDishes);
+  }, [filteredDishes]);
+
   function takeDish(id) {
     setEditableDish(filteredDishes.find((dish) => dish.id === id));
   }
@@ -51,7 +56,6 @@ function ProductsManagement({ isAddDishOpen, setAddDishOpen }) {
     editModalHandler();
   }
 
-
   const addDishOpener = () => {
     setAddDishOpen(true);
   }
@@ -59,7 +63,7 @@ function ProductsManagement({ isAddDishOpen, setAddDishOpen }) {
   return (
     <>
       <div className={isAddDishOpen ? "add-dish-container" : "add-dish-close"}>
-        <AddDish dishes={dishes} isAddDishOpen={isAddDishOpen} setAddDishOpen={setAddDishOpen} />
+        <AddDish setFilteredDishes={setFilteredDishes} filteredDishes={filteredDishes} isAddDishOpen={isAddDishOpen} setAddDishOpen={setAddDishOpen} />
       </div>
       <div className="management-container">
         <div className="header-sticky">

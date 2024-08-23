@@ -2,48 +2,59 @@ import React, { useState } from "react";
 import "./AddDish.scss"
 
 
-const AddDish = ({ dishes, isAddDishOpen, setAddDishOpen }) => {
+const AddDish = ({ setFilteredDishes,filteredDishes, isAddDishOpen, setAddDishOpen }) => {
 
     const closeAddDish = () => {
         setAddDishOpen(false);
     }
+    console.log(filteredDishes.length)
 
-    const [newProduct, setNewProdduct] = useState({
-        id: "",
+
+    const lastId = filteredDishes.length + 1;
+
+    const [newProduct, setNewProduct] = useState({
+        id: lastId,
         name: "",
         price: 0,
         category: "",
-        image: ""
+        image: "",
+        description:""
     });
 
     const ımageHandler = (event) => {
-        setNewProdduct((prevState) => ({
+        setNewProduct((prevState) => ({
             ...prevState,
             image: event.target.value
         }));
     }
 
     const nameHandler = (event) => {
-        setNewProdduct((prevState) => ({
+        setNewProduct((prevState) => ({
             ...prevState,
             name: event.target.value
         }));
     }
 
     const priceHandler = (event) => {
-        setNewProdduct((prevState) => ({
+        setNewProduct((prevState) => ({
             ...prevState,
             price: event.target.value
         }));
     }
 
     const categoryHandler = (event) => {
-        setNewProdduct((prevState) => ({
+        setNewProduct((prevState) => ({
             ...prevState,
-            price: event.target.value
+            category: event.target.value
         }));
     }
 
+    const addDishButton = () => {
+        setFilteredDishes((prevState) => ([
+           ...prevState,
+           newProduct 
+       ]));
+    }
 
     return (
         <div className="add-dish-content-container">
@@ -71,7 +82,7 @@ const AddDish = ({ dishes, isAddDishOpen, setAddDishOpen }) => {
             </div>
             <div className="add-dish-buttons">
                 <button onClick={() => closeAddDish()} className="cancel-button"> Cancel </button>
-                <button className="add-button"> Add Dish </button>
+                <button onClick={() => addDishButton()} className="add-button"> Add Dish </button>
             </div>
         </div>
     )
