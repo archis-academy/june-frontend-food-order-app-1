@@ -11,7 +11,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+
 
 .form-container {
   display: flex;
@@ -39,23 +39,44 @@ h1 {
     font-family: $primary-font;
   }
 
-  button {
-    padding: 14px;
-    border-radius: 8px;
-    width: 200px;
-    background-color: #ea7c69;
-    border: none;
-    color: white;
-    font-family: $primary-font;
-    font-weight: bold;
-    transition: all 0.5s;
-  }
-  button:hover {
-    box-shadow: 2px 2px 16px #ea7c69, -2px -2px 16px #ea7c69;
-  }
+
+}
+
+.button-enabled{
+  padding: 14px;
+  border-radius: 8px;
+  width: 200px;
+  background-color: #ea7c69;
+  border: none;
+  color: white;
+  font-family: $primary-font;
+  font-weight: bold;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-enabled:hover{
+  box-shadow: 2px 2px 16px #ea7c69, -2px -2px 16px #ea7c69;
+}
+
+.button-disabled{
+  padding: 14px;
+  border-radius: 8px;
+  width: 200px;
+  background-color: lightgray;
+  border: none;
+  color: white;
+  font-family: $primary-font;
+  font-weight: bold;
+}
+
+.button-disabled:hover{
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 .login-alert {
   color: white;
   font-family: $primary-font;
+}
 }

@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 function LoginPage() {
 
   const [isFalse, setIsFalse] = useState(false);
-  const userData = JSON.parse(localStorage.getItem('users')) || [{ email: "hasimgorucu@gmail.com", password: "123456" }];
+  const userData = JSON.parse(localStorage.getItem('users')) || [{ email: "hasimgorucu@gmail.com", password: "123456",username: "hasim" }];
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -35,6 +35,10 @@ function LoginPage() {
     }
   }
 
+  const isFormValid = () => {
+    return formData.email !== "" && formData.password !== "";
+  };
+
   return (
     <div>
       <main className="login-page">
@@ -42,9 +46,9 @@ function LoginPage() {
           <h1>LOGIN</h1>
           <input onKeyUp={(e) => handleChange(e)} name="email" type="email" placeholder="Enter Your Email" />
           <input onKeyUp={(e) => handleChange(e)} name="password" type="password" placeholder="Enter Your Password" />
-          <div className="signup-alert"><span>Dont you have an account? / </span><Link to={"/signup"} style={{fontWeight:"bold"}}> Sign Up</Link></div>
+          <div className="login-alert"><span>Dont you have an account? / </span><Link to={"/signup"} style={{fontWeight:"bold"}}> Sign Up</Link></div>
           {isFalse ? <div className="login-alert">Username or password is incorrect</div> : <div></div>}
-          <button onClick={() => login()}>Login</button>
+          <button className={isFormValid() ? "button-enabled" : "button-disabled"} onClick={() => login()}>Login</button>
         </div>
       </main>
     </div>
