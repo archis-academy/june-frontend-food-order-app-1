@@ -23,7 +23,7 @@ function SettingsPage() {
     "security": <SecurityPage />,
     "about-us": <AboutUs />,
   };
-
+   
   
   return (
     <>

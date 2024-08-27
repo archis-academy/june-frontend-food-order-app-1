@@ -40,7 +40,6 @@ function ProductsManagement({ isAddDishOpen, setAddDishOpen }) {
   });
   const [editableDish, setEditableDish] = useState([]);
 
-
   useEffect(() => {
     setFilteredDishes(filteredDishes);
   }, [filteredDishes]);

@@ -21,38 +21,21 @@ const AddDish = ({ setFilteredDishes,filteredDishes, isAddDishOpen, setAddDishOp
         description:""
     });
 
-    const ımageHandler = (event) => {
-        setNewProduct((prevState) => ({
-            ...prevState,
-            image: event.target.value
-        }));
+    const changeHandler = (event) => {
+        const {name , value} = event.target;
+        
+       setNewProduct((prevState) => ({
+           ...prevState,
+           [name] : value 
+        }));   
     }
 
-    const nameHandler = (event) => {
-        setNewProduct((prevState) => ({
-            ...prevState,
-            name: event.target.value
-        }));
-    }
-
-    const priceHandler = (event) => {
-        setNewProduct((prevState) => ({
-            ...prevState,
-            price: event.target.value
-        }));
-    }
-
-    const categoryHandler = (event) => {
-        setNewProduct((prevState) => ({
-            ...prevState,
-            category: event.target.value
-        }));
-    }
 
     const addDishButton = () => {
+        event.preventDefault();
         setFilteredDishes((prevState) => ([
+            newProduct ,
            ...prevState,
-           newProduct 
        ]));
     }
 
@@ -60,19 +43,19 @@ const AddDish = ({ setFilteredDishes,filteredDishes, isAddDishOpen, setAddDishOp
         <div className="add-dish-content-container">
             <div className="add-dish-content">
                 <p className="add-dish-p"> Dish Image : </p>
-                <input type="text" onChange={ımageHandler} className="add-dish-input" />
+                <input type="text" name="image" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
                 <p className="add-dish-p"> Dish Name : </p>
-                <input type="text" onChange={nameHandler} className="add-dish-input" />
+                <input type="text" name="name" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
                 <p className="add-dish-p"> Dish Price : </p>
-                <input type="text" onChange={priceHandler} className="add-dish-input" />
+                <input type="text" name="price" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
                 <p className="add-dish-p"> Dish Category : </p>
-                <select onChange={categoryHandler} className="add-dish-input" id="">
+                <select name="category" onChange={changeHandler} className="add-dish-input" id="">
                     <option className="add-dish-option" value=""> All </option>
                     <option className="add-dish-option" value=""> Appetizer </option>
                     <option className="add-dish-option" value=""> Dessert </option>
