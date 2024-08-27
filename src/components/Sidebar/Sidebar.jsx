@@ -8,7 +8,7 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <nav className="navbar">
-        <img src="../../public/Logo.png" alt="logo" className="logo" />
+        <img src="Logo.png" alt="logo" className="logo" />
         <ul>
           {sidebarLinks.map((link, index) => (
             <li key={index} className="navbar-items">
