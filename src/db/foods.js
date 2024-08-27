@@ -46,7 +46,7 @@ export const foods = [
     name: "Beef dumpling in hot and sour soup",
     price: 10,
     description: "Tasty",
-    image: "../assets/Foods/beef.svg",
+    image: "@/assets/Foods/beef.svg",
 
     category: coldDishes,
   },
@@ -55,7 +55,7 @@ export const foods = [
     name: "Healthy noodle with spinach leaf",
     price: 15,
     description: "Cheesy",
-    image: "../assets/Foods/healthy-noodle.svg",
+    image: "@/assets/Foods/healthy-noodle.svg",
     category: grill,
   },
   {
@@ -63,7 +63,7 @@ export const foods = [
     name: "Hot spicy fried rice with omelet",
     price: 8,
     description: "appetizer",
-    image: "../assets/Foods/hot-rice.svg",
+    image: "@/assets/Foods/hot-rice.svg",
     category: appetizer,
   },
   {
@@ -71,7 +71,7 @@ export const foods = [
     name: "Hot spicy fried rice with omelet",
     price: 7,
     description: "Dessert",
-    image: "../assets/Foods/hot-spicy.svg",
+    image: "@/assets/Foods/hot-spicy.svg",
     category: dessert,
   },
   {
@@ -79,7 +79,7 @@ export const foods = [
     name: "Spicy seasoned seafood noodles ",
     price: 15,
     description: "Cold Dishes",
-    image: "../assets/Foods/mushroom.svg",
+    image: "@/assets/Foods/mushroom.svg",
     category: coldDishes,
   },
   {
@@ -87,7 +87,7 @@ export const foods = [
     name: "Spicy instant noodle with special omelette",
     price: 9,
     description: "Dessert",
-    image: "../assets/Foods/noodle-omelette.svg",
+    image: "@/assets/Foods/noodle-omelette.svg",
     category: dessert,
   },
   {
@@ -95,7 +95,7 @@ export const foods = [
     name: "Healthy noodle with spinach leaf",
     price: 6,
     description: "Cold Dishes",
-    image: "../assets/Foods/noodle-spinach-leaf.svg",
+    image: "@/assets/Foods/noodle-spinach-leaf.svg",
     category: coldDishes,
   },
   {
@@ -103,7 +103,7 @@ export const foods = [
     name: "Salted Pasta with mushroom sauce",
     price: 26,
     description: "Grill",
-    image: "../assets/Foods/noodles.svg",
+    image: "@/assets/Foods/noodles.svg",
     category: grill,
   },
   {
@@ -111,7 +111,7 @@ export const foods = [
     name: "Spicy instant noodle with special omelette",
     price: 4,
     description: "Soup",
-    image: "../assets/Foods/spicy-instant.svg",
+    image: "@/assets/Foods/spicy-instant.svg",
     category: soup,
   },
   {
@@ -119,7 +119,7 @@ export const foods = [
     name: "Philadelphia Roll Sushi",
     price: 4,
     description: "Philadelphia Roll Sushi",
-    image: "../assets/Foods/Philadelphia-Rol.jpeg",
+    image: "@/assets/Foods/Philadelphia-Rol.jpeg",
     category: sushi,
   },
   {
@@ -127,7 +127,7 @@ export const foods = [
     name: "Tuna Roll Maki sushi made with tuna",
     price: 4,
     description: "Tuna Roll",
-    image: "../assets/Foods/Tuna-Roll.jpeg",
+    image: "@/assets/Foods/Tuna-Roll.jpeg",
     category: sushi,
   },
   {
@@ -135,7 +135,7 @@ export const foods = [
     name: "Unagi Sushi  ",
     price: 4,
     description: "Unagi Sushi",
-    image: "../assets/Foods/Unagi-Sushi.jpeg",
+    image: "@/assets/Foods/Unagi-Sushi.jpeg",
     category: sushi,
   },
   {
@@ -143,7 +143,7 @@ export const foods = [
     name: "Ebi Sushi Sushi made with shrimp.",
     price: 4,
     description: "Ebi Sushi",
-    image: "../assets/Foods/Ebi-Sushi.jpeg",
+    image: "@/assets/Foods/Ebi-Sushi.jpeg",
     category: sushi,
   },
   {
@@ -151,7 +151,7 @@ export const foods = [
     name: "Temaki Cone-shaped, hand-held sushi.",
     price: 6,
     description: "Temaki",
-    image: "../assets/Foods/Temaki.jpeg",
+    image: "@/assets/Foods/Temaki.jpeg",
     category: sushi,
   },
   {
@@ -159,7 +159,7 @@ export const foods = [
     name: "Sashimi Thinly sliced raw fish or seafood.",
     price: 8,
     description: "Sashimi",
-    image: "../assets/Foods/Sashimi.jpeg",
+    image: "@/assets/Foods/Sashimi.jpeg",
     category: sushi,
   },
   {
@@ -167,7 +167,7 @@ export const foods = [
     name: "Maki a type of rolled sushi ",
     price: 4,
     description: "Maki",
-    image: "../assets/Foods/maki.png",
+    image: "@/assets/Foods/maki.png",
     category: sushi,
   },
 ];
