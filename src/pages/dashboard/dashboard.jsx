@@ -14,7 +14,6 @@ function DashBoard() {
 
       <div className="left-side">
         <DashboardHeader />
-        <div className="order-col"></div>
         <Analytics />
         <OrderReport />
       </div>
