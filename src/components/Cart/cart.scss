@@ -11,10 +11,7 @@ $primary-cart-font-family: "Barlow", sans-serif;
   padding: 10px 40px;
   position: relative;
   overflow-y: scroll;
-
   -ms-overflow-style: none;
-
-  /* Hide scrollbar for Firefox */
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
@@ -28,6 +25,14 @@ $primary-cart-font-family: "Barlow", sans-serif;
 
   @media screen and (max-width: 430px) {
     padding: 10px;
+
+    .cart-product-mapped-data-container {
+      flex-direction: column;
+
+      .cart-product-img-p-container{
+        flex-direction: column;
+      }
+    }
   }
   @media screen and (max-width: 350px) {
     padding: 2px;

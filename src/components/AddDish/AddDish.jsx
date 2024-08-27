@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AddDish.scss"
 
 
-const AddDish = ({ setFilteredDishes,filteredDishes, isAddDishOpen, setAddDishOpen }) => {
+const AddDish = ({ setDishes, dishes, isAddDishOpen, setAddDishOpen }) => {
 
     const closeAddDish = () => {
         setAddDishOpen(false);
     }
-    console.log(filteredDishes.length)
+
+    console.log(dishes)
 
 
-    const lastId = filteredDishes.length + 1;
+
+    const lastId = dishes.length ;
 
     const [newProduct, setNewProduct] = useState({
         id: lastId,
@@ -18,25 +20,32 @@ const AddDish = ({ setFilteredDishes,filteredDishes, isAddDishOpen, setAddDishOp
         price: 0,
         category: "",
         image: "",
-        description:""
+        description: ""
     });
 
-    const changeHandler = (event) => {
-        const {name , value} = event.target;
-        
-       setNewProduct((prevState) => ({
-           ...prevState,
-           [name] : value 
-        }));   
-    }
+    useEffect(() => {
+        setNewProduct((prevState) => ({
+            ...prevState,
+             id: lastId + 1,
+        }));
 
+    }, [dishes]);
+
+    const changeHandler = (event) => {
+        const { name, value } = event.target;
+
+        setNewProduct((prevState) => ({
+            ...prevState,
+            [name]: value
+        }));
+    }
 
     const addDishButton = () => {
         event.preventDefault();
-        setFilteredDishes((prevState) => ([
-            newProduct ,
-           ...prevState,
-       ]));
+        setDishes((prevState) => ([
+            newProduct,
+            ...prevState,
+        ]));
     }
 
     return (
