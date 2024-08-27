@@ -10,12 +10,10 @@ import DashBoard from "./pages/dashboard/dashboard.jsx";
 const routes = [
   {
     path: "/",
-    element: (
-         <HomePage />
-    ),
+
     element: <HomePage />,
   },
-  
+
   {
     path: "/dashboard",
     element: (

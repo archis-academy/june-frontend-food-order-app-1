@@ -33,9 +33,9 @@ function DropdownMenu({ items }) {
     <div className="dropdown" ref={dropdownRef}>
       <button onClick={toggleDropdown} className="dropdown-toggle">
         {isOpen ? (
-          <img src="./public/up-arrow.svg" alt="" />
+          <img src="up-arrow.svg" alt="" />
         ) : (
-          <img src="./public/down-arrow.svg" alt="" />
+          <img src="down-arrow.svg" alt="" />
         )}{" "}
         {selectedItem || items[0]}
       </button>
