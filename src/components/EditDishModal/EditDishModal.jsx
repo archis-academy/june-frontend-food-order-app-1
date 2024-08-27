@@ -1,6 +1,6 @@
 import "./EditDishModal.scss";
 import { useState } from "react";
-import lineImg from "line.svg";
+import lineImg from "../../../public/line.svg";
 import Button from "../Button/Button";
 
 function EditDishModal({ editHandler, editableDish, onEdit }) {
