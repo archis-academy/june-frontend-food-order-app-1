@@ -3,20 +3,47 @@ import React, { useState, useEffect } from "react";
 import "./dishes.scss";
 import { foods, categories } from "../../db/foods";
 
-const Menu = () => {
+const Menu = ({cartProducts, setCartProducts}) => {
 	const [filter, setFilter] = useState("all");
 	const [serviceType, setServiceType] = useState("dine in");
 	const [currentFoods, setCurrentFoods] = useState(foods);
 	const [timer, setTimer] = useState(Date.now());
+
+	//Add Cart Functions Start
+	
+	const addToCart = (product) => {
+		const isInCart = cartProducts.some((cartProduct) => {
+			return parseInt(product.id) === parseInt(cartProduct.id)
+		});
+
+		if (isInCart) {
+			const sameProduct = cartProducts.find((cartProduct) => {
+				return parseInt(product.id) === parseInt(cartProduct.id)
+			});
+
+			sameProduct.quantity = sameProduct.quantity + 1;
+			setCartProducts((prevProducts) =>
+				prevProducts.map((prevProduct) =>
+					prevProduct.id === product.id ? { ...prevProduct, quantity: sameProduct.quantity } : prevProduct
+				)
+			);
+		}
+		else {
+			setCartProducts((prev) => [...prev, product]);
+		}
+	}
+
+	useEffect(() => {
+		localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+	}, [cartProducts]);
+	//Use this for adding products to cart
 
 	const filteredFoods =
 		filter === "all"
 			? currentFoods
 			: currentFoods.filter((food) => food.category.key === filter);
 
-	const handleAddToCart = (food) => {
-		console.log(`${food.name} added to cart`);
-	};
+
 
 	const handleServiceTypeChange = (type) => {
 		setServiceType(type);
@@ -53,14 +80,14 @@ const Menu = () => {
 			</div>
 			<div className="dishes-container">
 				{filteredFoods.map((food, rowIndex) => (
-					<div className="row" key={rowIndex}>
-						<div
-							className="dish"
-							key={food}
-							onClick={() => handleAddToCart(food)}
-						>
-							<div className="background-overlay"></div>
-							<img src={food.image} alt={food.name} />
+
+					<div
+						key={rowIndex}
+						className="dish"
+					>
+						<img src={food.image} alt={food.name} />
+						<div className="overlay-div"></div>
+						<div className="dishes-text-container">
 							<h3>{food.name}</h3>
 							<p>{food.description}</p>
 							<div className="price-box">
@@ -69,9 +96,10 @@ const Menu = () => {
 									<p> $ {food.price}</p>
 								</span>
 							</div>
-							<div className="add-to-cart">Add to Cart</div> {/* Add this */}
 						</div>
+						<div onClick={() => addToCart(food)} className="add-to-cart">Add to Cart</div> {/* Add this */}
 					</div>
+
 				))}
 			</div>
 		</div>
