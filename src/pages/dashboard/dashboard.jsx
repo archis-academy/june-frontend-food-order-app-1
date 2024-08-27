@@ -5,13 +5,15 @@ import Analytics from "../../components/Analytics/Analytics";
 
 import OrderReport from "../../components/OrderReport/OrderReport";
 import "./dashboard.scss";
+import DashboardHeader from "../../components/DashboardHeader/DashboardHeader";
 
 function DashBoard() {
   return (
     <div className="dashboard">
       <Sidebar />
+
       <div className="left-side">
-        <div className="order-col"></div>
+        <DashboardHeader />
         <Analytics />
         <OrderReport />
       </div>
