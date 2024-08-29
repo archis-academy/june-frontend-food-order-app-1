@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./AddDish.scss"
 
-const AddDish = ({ setDishes, dishes, isAddDishOpen, setAddDishOpen }) => {
+const AddDish = ({ setDishes, dishes, setAddDishOpen }) => {
 
     const closeAddDish = () => {
         setAddDishOpen(false);
@@ -47,31 +47,39 @@ const AddDish = ({ setDishes, dishes, isAddDishOpen, setAddDishOpen }) => {
             newProduct,
             ...prevState,
         ]));
-         
+
+        setNewProduct(() => ({
+            id: lastId,
+            name: "",
+            price: 0,
+            category: "",
+            image: "",
+            description: ""
+        }));
     }
 
     return (
         <div className="add-dish-content-container">
             <div className="add-dish-content">
                 <p className="add-dish-p"> Dish Image  </p>
-                <input type="text" name="image" onChange={changeHandler} className="add-dish-input" />
+                <input type="text" name="image" value={newProduct.image}  onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
                 <p className="add-dish-p"> Dish Name  </p>
-                <input type="text" name="name" onChange={changeHandler} className="add-dish-input" />
+                <input type="text" value={newProduct.name} name="name" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
                 <p className="add-dish-p"> Dish  Description  </p>
-                <input type="text" name="description" onChange={changeHandler} className="add-dish-input" />
+                <input type="text" value={newProduct.description}  name="description" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
                 <div className="add-dish-double-container">
                     <p className="add-dish-p"> Dish Price  </p>
-                    <input type="text" name="price" onChange={priceHandler} className="add-dish-input add-dish-price" />
+                    <input type="text" name="price" value={newProduct.price}  onChange={priceHandler} className="add-dish-input add-dish-price" />
                 </div>
                 <div className="add-dish-double-container">
                     <p className="add-dish-p"> Dish Category  </p>
-                    <select name="category" onChange={changeHandler} className="add-dish-input add-dish-category" id="">
+                    <select name="category" value={newProduct.category}  onChange={changeHandler} className="add-dish-input add-dish-category" id="">
                         <option className="add-dish-option" value="all"> All </option>
                         <option className="add-dish-option" value="appetizer"> Appetizer </option>
                         <option className="add-dish-option" value="dessert"> Dessert </option>

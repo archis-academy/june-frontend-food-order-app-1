@@ -62,7 +62,7 @@ function ProductsManagement({ isAddDishOpen, setAddDishOpen }) {
   return (
     <>
       <div className={isAddDishOpen ? "add-dish-container" : "add-dish-close"}>
-        <AddDish setDishes={setDishes} dishes={dishes} isAddDishOpen={isAddDishOpen} setAddDishOpen={setAddDishOpen} />
+        <AddDish setDishes={setDishes} dishes={dishes}  setAddDishOpen={setAddDishOpen} />
       </div>
       <div className="management-container">
         <div className="header-sticky">
