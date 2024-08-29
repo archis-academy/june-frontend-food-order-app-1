@@ -78,7 +78,6 @@ const Menu = ({ cartProducts, setCartProducts }) => {
 						<option value="delivery">Delivery</option>
 					</select>
 				</div>
-
 			</div>
 			<div className="dishes-container">
 				{filteredFoods.map((food, rowIndex) => (

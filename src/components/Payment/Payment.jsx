@@ -46,14 +46,14 @@ function Payment( {openPayment, setPaymentOpen}) {
   }
 
   return (
-    <div className="payment-container">  
+    <div className="payment-container">
         <div className="payment-header">
           <h1 className="header-title">Payment</h1>
           <p className="header-text">3 payment method available</p>
         </div>
 
         <div className="line-box">
-          <img className="line-svg" src="./public/line.svg" alt="" />
+          <img className="line-svg" src="line.svg" alt="" />
         </div>
 
         <div className="payment-methods-container">
@@ -65,18 +65,18 @@ function Payment( {openPayment, setPaymentOpen}) {
                 selectedButton === "button1" ? "active" : ""
               }`}
             >
-              <img src="./public/credit-card.svg" alt="" />
+              <img src="credit-card.svg" alt="" />
               <img
                 className={`btn-check-icon ${
                   selectedButton === "button1" ? "active" : ""
                 }`}
-                src="./public/check-icon.svg"
+                src="check-icon.svg"
                 alt=""
               />
               <p className="methods-card-text">Credit Card</p>
             </div>
             <div className="methods-card">
-              <img src="./public/paypal.svg" alt="" />
+              <img src="paypal.svg" alt="" />
               <p className="methods-card-text">Paypal</p>
             </div>
             <div
@@ -85,12 +85,12 @@ function Payment( {openPayment, setPaymentOpen}) {
                 selectedButton === "button3" ? "active" : ""
               }`}
             >
-              <img src="./public/wallet.svg" alt="" />
+              <img src="wallet.svg" alt="" />
               <img
                 className={`btn-check-icon ${
                   selectedButton === "button3" ? "active" : ""
                 }`}
-                src="./public/check-icon.svg"
+                src="check-icon.svg"
                 alt=""
               />
               <p className="methods-card-text">Cash</p>
@@ -145,7 +145,7 @@ function Payment( {openPayment, setPaymentOpen}) {
         </div>
 
         <div className="line-box">
-          <img className="line-svg" src="./public/line.svg" alt="" />
+          <img className="line-svg" src="line.svg" alt="" />
         </div>
 
         <div className="order-information">

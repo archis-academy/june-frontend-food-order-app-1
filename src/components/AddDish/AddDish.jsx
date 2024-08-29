@@ -47,7 +47,7 @@ const AddDish = ({ setDishes, dishes, isAddDishOpen, setAddDishOpen }) => {
             newProduct,
             ...prevState,
         ]));
-
+         
     }
 
     return (
