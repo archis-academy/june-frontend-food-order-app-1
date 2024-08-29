@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import "./dishes.scss";
 import { foods, categories } from "../../db/foods";
 
-const Menu = ({cartProducts, setCartProducts}) => {
+const Menu = ({ cartProducts, setCartProducts }) => {
 	const [filter, setFilter] = useState("all");
 	const [serviceType, setServiceType] = useState("dine in");
 	const [currentFoods, setCurrentFoods] = useState(foods);
 	const [timer, setTimer] = useState(Date.now());
 
 	//Add Cart Functions Start
-	
+
 	const addToCart = (product) => {
 		const isInCart = cartProducts.some((cartProduct) => {
 			return parseInt(product.id) === parseInt(cartProduct.id)
@@ -47,7 +47,6 @@ const Menu = ({cartProducts, setCartProducts}) => {
 
 	const handleServiceTypeChange = (type) => {
 		setServiceType(type);
-		console.log(`Service type set to ${type}`);
 	};
 
 	const rows = [];
@@ -59,24 +58,27 @@ const Menu = ({cartProducts, setCartProducts}) => {
 		<div className="menu">
 			<div className="title">
 				<h2>Choose Dishes</h2>
-				<select
-					className="menu-filter"
-					onChange={(e) => setFilter(e.target.value)}
-				>
-					{categories.map((category) => (
-						<option key={category.id} value={category.key}>
-							{category.name}
-						</option>
-					))}
-				</select>
-				<select
-					className="service-type"
-					onChange={(e) => handleServiceTypeChange(e.target.value)}
-				>
-					<option value="dine in">Dine In</option>
-					<option value="togo">To Go</option>
-					<option value="delivery">Delivery</option>
-				</select>
+				<div className="menu-selects">
+					<select
+						className="menu-filter"
+						onChange={(e) => setFilter(e.target.value)}
+					>
+						{categories.map((category) => (
+							<option key={category.id} value={category.key}>
+								{category.name}
+							</option>
+						))}
+					</select>
+					<select
+						className="service-type"
+						onChange={(e) => handleServiceTypeChange(e.target.value)}
+					>
+						<option value="dine in">Dine In</option>
+						<option value="togo">To Go</option>
+						<option value="delivery">Delivery</option>
+					</select>
+				</div>
+
 			</div>
 			<div className="dishes-container">
 				{filteredFoods.map((food, rowIndex) => (

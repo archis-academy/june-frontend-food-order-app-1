@@ -13,7 +13,6 @@ const CartFooter = ({openPayment,setPaymentOpen, cartContentProducts}) => {
 
     const paymentOpener = () => {
         setPaymentOpen(true);
- 
     }
 
     return (

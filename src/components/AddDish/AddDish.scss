@@ -17,7 +17,7 @@
         display: flex;
          flex: 1;
          align-items: center;
-         gap: 15px;
+         gap: 10px;
          border-bottom: 1px $primary-bg solid;
          padding: 25px 0;
          flex-wrap: wrap;
@@ -25,11 +25,13 @@
          .add-dish-double-container{
             display: flex;
             gap: 15px;
+            width: 100%;
+            flex-wrap: wrap;
          }
      
 
         .add-dish-input{
-            width: 75%;
+            width: 73%;
             background-color: $primary-bg;
             border-radius: 8px;
             padding: 8px;
@@ -40,19 +42,12 @@
             font-weight: 500;
         }
 
-        .add-dish-price{
-            width: 74%;
-        }
-
-        .add-dish-category {
-            width: 50%;
-
-        }
-
+    
         .add-dish-p{
             font-family: $primary-font;
             font-weight: 500;
             font-size: 20px;
+            width: 145px;
         }
     }
 
@@ -84,18 +79,25 @@
 
     @media screen and (max-width: 1205px) {
         width: 60%;
+        gap: 5px;
         .add-dish-content{
+            padding: 12px 0;
+
+            .add-dish-p{
+                font-size: 17px;
+            }
+
             .add-dish-input {
                 width: 100%;
             }
-
-            .add-dish-price{
-                width: 74%;
-            }
-
-            .add-dish-category{
-                width: 50%;
-            }
         }
     }
+
+    @media (max-width: 768px) {
+        width: 80%;
+         margin-right: 70px;
+        
+
+    }
+
 }

@@ -4,8 +4,27 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 20px;
-		width: 632px;
+	    padding: 10px 17px;
 		height: 48px;
+		flex-wrap: wrap;
+		gap: 10px;
+
+
+		.menu-selects {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		@media screen and (max-width: 510px) {
+          margin-bottom: 40px;
+		}
+
+		
+		@media screen and (max-width: 340px) {
+			margin-bottom: 70px;
+		  }
+  
 
 
 		h2 {
@@ -14,10 +33,10 @@
 
 		.menu-filter,
 		.service-type {
-			margin-left: 10px;
-			padding: 5px;
-			background-color: rgba(31, 29, 43, 1);
-			border: none;
+			padding: 10px;
+			background-color: #1F1D2B;
+			border: 1px solid #393C49;
+			border-radius: 8px;
 			color: white;
 		}
 

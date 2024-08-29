@@ -187,6 +187,7 @@ $primary-cart-font-family: "Barlow", sans-serif;
       border: 1px solid $accent-color;
       border-radius: 8px;
       padding: 7px 8px;
+      cursor: pointer;
     }
   }
 
@@ -303,5 +304,12 @@ $primary-cart-font-family: "Barlow", sans-serif;
     .cart-header-title {
       margin-left: 70px;
     }
+
+    .cart-footer-container {
+      .cart-footer-info-container{
+       padding: 40px 60px;
+      }  
+    }
+
   }
 }

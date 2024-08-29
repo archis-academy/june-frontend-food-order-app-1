@@ -53,24 +53,24 @@ const AddDish = ({ setDishes, dishes, isAddDishOpen, setAddDishOpen }) => {
     return (
         <div className="add-dish-content-container">
             <div className="add-dish-content">
-                <p className="add-dish-p"> Dish Image : </p>
+                <p className="add-dish-p"> Dish Image  </p>
                 <input type="text" name="image" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
-                <p className="add-dish-p"> Dish Name : </p>
+                <p className="add-dish-p"> Dish Name  </p>
                 <input type="text" name="name" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
-                <p className="add-dish-p"> Dish <br /> Description : </p>
+                <p className="add-dish-p"> Dish  Description  </p>
                 <input type="text" name="description" onChange={changeHandler} className="add-dish-input" />
             </div>
             <div className="add-dish-content">
                 <div className="add-dish-double-container">
-                    <p className="add-dish-p"> Dish <br /> Price : </p>
+                    <p className="add-dish-p"> Dish Price  </p>
                     <input type="text" name="price" onChange={priceHandler} className="add-dish-input add-dish-price" />
                 </div>
                 <div className="add-dish-double-container">
-                    <p className="add-dish-p"> Dish <br /> Category : </p>
+                    <p className="add-dish-p"> Dish Category  </p>
                     <select name="category" onChange={changeHandler} className="add-dish-input add-dish-category" id="">
                         <option className="add-dish-option" value="all"> All </option>
                         <option className="add-dish-option" value="appetizer"> Appetizer </option>
