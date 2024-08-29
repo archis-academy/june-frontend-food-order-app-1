@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import CartFooter from "./CartFooter";
 
-const CartContent = ({openPayement,setPaymentOpen, cartProducts, setCartProducts }) => {
+const CartContent = ({ openPayement, setPaymentOpen, cartProducts, setCartProducts }) => {
     const [cartContentProducts, setCartContentProducts] = useState(cartProducts);
- 
+
     useEffect(() => {
         setCartContentProducts(cartProducts);
     }, [cartProducts]);
@@ -35,17 +35,23 @@ const CartContent = ({openPayement,setPaymentOpen, cartProducts, setCartProducts
                                 <div className="cart-product-img-p-container">
                                     <img className="cart-product-img" src={product.image} alt="" />
                                     <div className="cart-product-title-price-container">
-                                        <p>{product.name}</p>
-                                        <p>${product.price}</p>
+                                        <p className="cart-p cart-name-p">{product.name}</p>
+                                        <p className="cart-p cart-price-p">${product.price}</p>
                                     </div>
                                 </div>
                                 <div className="cart-product-qty-total-container">
-                                    <input className="cart-product-qty" type="text" onChange={(event) => quantityHandler(product, event)} placeholder={product.quantity} />
-                                    <p>${(product.quantity * product.price)}</p>
+                                    <div className="cart-responsive-p-container">
+                                        <p className="cart-responsive-p"> Quantity : </p>
+                                        <input className="cart-product-qty" type="text" onChange={(event) => quantityHandler(product, event)} placeholder={product.quantity} />
+                                    </div>
+                                    <div className="cart-responsive-p-container">
+                                        <p className="cart-responsive-p"> Subtotal : </p>
+                                        <p className="cart-p">${(product.quantity * product.price)}</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className="cart-product-note-container">
-                                <input className="cart-product-note-container" type="text" placeholder="Order Note..." />
+                                <input className="cart-product-note" type="text" placeholder="Order Note..." />
                                 <div onClick={() => removeFromCart(product)} className="cart-products-delete-svg-container">
                                     <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M20.5001 6H3.5" stroke="#EA7C69" stroke-width="1.5" stroke-linecap="round" />
@@ -58,7 +64,7 @@ const CartContent = ({openPayement,setPaymentOpen, cartProducts, setCartProducts
                     ))
                 }
             </div>
-            <CartFooter openPayement={openPayement} setPaymentOpen={setPaymentOpen} cartContentProducts={cartContentProducts}/>
+            <CartFooter openPayement={openPayement} setPaymentOpen={setPaymentOpen} cartContentProducts={cartContentProducts} />
         </>
 
     )

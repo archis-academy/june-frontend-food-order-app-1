@@ -29,12 +29,15 @@ function HomePage() {
       setCartProducts(updatedCartProducts);
     }
   }, [cartProducts]);
-
+ 
+  const responsiveWidth = parseInt(window.innerWidth);
 
   return (
     <div>
-      <Sidebar />
-      <div className="mainRoot">
+      <div className={openCart && responsiveWidth < 500 ?  "responsive-cart-sidebar" : ""}>
+      <Sidebar />  
+      </div>
+      <div className={openCart && responsiveWidth < 500 ?  "responsive-cart-root" : "mainRoot"}>
         <Header openCart={openCart} setCartOpen={setCartOpen} />
         <div className={`${openCart ? "cart-payment-container" : "cart-payment-close"} ${openPayment ? "payment-open" : "payment-close"}`}>
           <Cart openPayement={openPayment} setPaymentOpen={setPaymentOpen} cartProducts={cartProducts} openCart={openCart} setCartOpen={setCartOpen} setCartProducts={setCartProducts} />

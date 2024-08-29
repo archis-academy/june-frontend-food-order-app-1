@@ -6,8 +6,8 @@ import CategoryTabs from "../../components/CategoryTabs/CategoryTabs"; // Ensure
 
 const Menu = ({ cartProducts, setCartProducts }) => {
   const [serviceType, setServiceType] = useState("dine in");
-  const [dishes, setDishes] = useState(foods);
-  const [filteredDishes, setFilteredDishes] = useState(dishes);
+  
+  const [filteredDishes, setFilteredDishes] = useState(foods);
   const [filterParameters, setFilterParameters] = useState({
     category: "all",
     serviceType: "All",
@@ -42,7 +42,7 @@ const Menu = ({ cartProducts, setCartProducts }) => {
   }, [cartProducts]);
 
   useEffect(() => {
-    let filtered = dishes;
+    let filtered = foods;
 
     if (filterParameters.category !== "all") {
       filtered = filtered.filter(
@@ -57,7 +57,7 @@ const Menu = ({ cartProducts, setCartProducts }) => {
     }
 
     setFilteredDishes(filtered);
-  }, [filterParameters, dishes]);
+  }, [filterParameters, foods]);
 
   const handleServiceTypeChange = (type) => {
     setFilterParameters((prev) => ({
@@ -74,7 +74,7 @@ const Menu = ({ cartProducts, setCartProducts }) => {
         filterParameters={filterParameters}
         setFilterParameters={setFilterParameters}
         setFilteredDishes={setFilteredDishes}
-        dishes={dishes}
+        dishes={foods}
       />
 			</div>
       <div className="title">

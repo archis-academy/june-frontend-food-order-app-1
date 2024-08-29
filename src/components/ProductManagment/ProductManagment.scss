@@ -35,6 +35,21 @@
   padding: 25px 0;
 }
 
+
+
+.add-dish-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.add-dish-close{
+  display: none;
+}
+
 .add-dish-card {
   display: flex;
   flex-direction: column;
@@ -45,6 +60,7 @@
   border: 1px dashed $accent-color;
   border-radius: 8px;
   min-height: 300px;
+  cursor: pointer;
 
   span {
     font-size: 25px;

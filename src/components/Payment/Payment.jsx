@@ -98,7 +98,7 @@ function Payment( {openPayment, setPaymentOpen}) {
           </div>
         </div>
 
-        <div className="content-container">
+        <div className="payment-content-container">
           <form className="payment-information">
             <label id="name" className="informations">
               Cardholder Name
