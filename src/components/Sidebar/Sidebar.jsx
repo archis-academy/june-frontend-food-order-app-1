@@ -7,18 +7,18 @@ function Sidebar() {
   function logout() {
     localStorage.removeItem("currentuser");
   }
-
+  let pathnameFirst = "/" + location.pathname.split("/")[1];
   return (
     <aside className="sidebar">
       <nav className="navbar">
-        <img src="../../public/Logo.png" alt="logo" className="logo" />
+        <img src="Logo.png" alt="logo" className="logo" />
         <ul>
           {sidebarLinks.map((link, index) => (
             <li key={index} className="navbar-items">
               <NavLink
                 to={link.path == "/logout" ? "/login" : link.path}
                 onClick={link.path == "/logout" ? logout : null}
-                className={link.path === location.pathname ? "nav-item active-link" : "nav-item"}
+                className={link.path === pathnameFirst ? "nav-item active-link" : "nav-item"}
               >
                 {link.icon}
               </NavLink>
