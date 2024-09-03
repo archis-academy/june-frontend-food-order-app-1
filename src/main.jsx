@@ -10,7 +10,7 @@ const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider isSingedIn={true}>
+    <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
       <App/>
     </AuthProvider>

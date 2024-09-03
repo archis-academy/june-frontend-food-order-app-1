@@ -16,16 +16,11 @@ import Notification from "./pages/NotificationPage/Notification.jsx";
 const routes = [
   {
     path: "/",
-
-    element: <HomePage />,
-  },
-  {
-    path: "/discount",
-    element: <Discount />,
-  },
-  {
-    path: "/notification",
-    element: <Notification />,
+    element: (
+      <ProtectedRoute>
+        <HomePage />
+        </ProtectedRoute>
+    ),
   },
   {
     path: "/message",
@@ -34,7 +29,9 @@ const routes = [
   {
     path: "/dashboard",
     element: (
+      <ProtectedRoute>
       <DashBoard />
+      </ProtectedRoute> 
     ),
   },
   {
@@ -45,7 +42,9 @@ const routes = [
   {
     path: "/settings",
     element: (
+      <ProtectedRoute>
         <SettingsPage />
+      </ProtectedRoute>
     ),
   },
   {
