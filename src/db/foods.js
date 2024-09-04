@@ -57,7 +57,7 @@ export const categories = [
   },
 ];
 
-const [coldDishes, grill, appetizer, dessert, soup, sushi] = categories;
+const [_, coldDishes, grill, appetizer, dessert, soup, sushi] = categories;
 export const foods = [
   {
     id: 1,

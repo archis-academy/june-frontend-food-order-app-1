@@ -1,4 +1,4 @@
-/* eslint-disable no-dupe-keys */
+import ProtectedRoute from "@/components/ProtectedRoute.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import SignupPage from "./pages/SignupPage/SignupPage.jsx";
 import LoginPage from "./pages/LoginPage/LoginPage.jsx";
@@ -8,30 +8,45 @@ import Discount from "./pages/Discount/Discount.jsx";
 import Message from "./pages/MessagePage/Message.jsx";
 import Notification from "./pages/NotificationPage/Notification.jsx";
 
-
-
-
-
-
 const routes = [
   {
     path: "/",
     element: (
       <ProtectedRoute>
         <HomePage />
-        </ProtectedRoute>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/discount",
+    element: (
+      <ProtectedRoute>
+        <Discount />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/notification",
+    element: (
+      <ProtectedRoute>
+        <Notification />
+      </ProtectedRoute>
     ),
   },
   {
     path: "/message",
-    element: <Message />,
+    element: (
+      <ProtectedRoute>
+        <Message />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/dashboard",
     element: (
       <ProtectedRoute>
-      <DashBoard />
-      </ProtectedRoute> 
+        <DashBoard />
+      </ProtectedRoute>
     ),
   },
   {
@@ -56,13 +71,13 @@ const routes = [
     element: <LoginPage />,
   },
   {
-  path: "/settings/:tabName",
-  element: <SettingsPage />
+    path: "/settings/:tabName",
+    element: (
+      <ProtectedRoute>
+        <SettingsPage />
+      </ProtectedRoute>
+    ),
   },
-
-
-
-
 ];
 
 export default routes;
